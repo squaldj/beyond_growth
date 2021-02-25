@@ -354,6 +354,10 @@ section
     border-radius 100%
     overflow hidden
     position relative
+    transition transform 1s ease
+    &.active
+      border-color $black
+      transform scale(1.3)
     &:after
       content ''
       width 100%
@@ -382,40 +386,42 @@ section
     line-height 26px
     color $brown
 
-.dot
+.dots
   position absolute
+  width 70%
+  height 23px
   top 70px
   left 50%
   transform translateX(-50%)
-  width 60%
-  height: 15px;
-  background radial-gradient(circle farthest-side, $blue, $blue 60%, transparent 60%, transparent);
-  background-size: 15px 15px;
-  .dot-filled
-    width 150px
-    height 15px
-    position absolute
-    animation: slide 5s infinite;
-    animation-delay 1s
-    transition .25s ease all
-    &:after
-      width 100%
-      height 15px
-      background radial-gradient(circle farthest-side, $black, $black 60%, transparent 60%, transparent);
-      background-size: 15px 15px;
-      position absolute
-      z-index 3
-      content ''
-    &:before
-      content ''
-      background white
-      width 100%
-      height 100%
-      z-index 1
-      position absolute
-      left 0
+  svg
+    z-index 99
+    position relative
+
+.dots-color
+  background $blue
+  width 100%
+  height 23px
+  position absolute
+  left 0
+  top 0
+  z-index 2
+
+.dots-color-dark
+  background $black
+  width 100px
+  height 23px
+  position absolute
+  top 0
+  left 0%
+  z-index 4
+  animation slide 15s infinite
+
+
 
 @keyframes slide
-  for i in 0..10
-    {10% * i}
-      margin-left (i * 15)px
+  0%
+    left 0%
+  50%
+    left 50%
+  100%
+    left 90%

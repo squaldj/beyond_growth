@@ -28,4 +28,17 @@ $(document).ready(function(){
       $(this).addClass('blurEffect');
     $('.content').show();
   });
+  grow()
 })
+
+function grow(){
+  let active = 0;
+  $(".img-step").eq(active).addClass('active')
+  setInterval(function(){
+    const length = $(".img-step").length
+    const theIndex = active === length-1 ? active = 0 : active+=1
+    $(".img-step").eq(theIndex).addClass('active')
+    $(".img-step").eq(active-1).removeClass('active')
+  }, 5000)
+}
+
