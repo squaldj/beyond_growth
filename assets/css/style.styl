@@ -1,0 +1,421 @@
+$black = #1c1f21;
+$grey = rgb(119, 119, 119);
+$blue = rgb(35, 136, 237);
+$whiteSmoke = #f0f3f7
+$brown = #777
+$openSans = 'Open Sans', sans-serif;
+
+transitionEase()
+  transition .25s ease all
+
+*, *:before, *:after
+  box-sizing border-box
+html, body
+  margin 0
+  -webkit-font-smoothing subpixel-antialiased
+  -webkit-text-stroke 1px rgba(0,0,0,0)
+  font-family 'Montserrat', sans-serif
+// modifier
+._text-left
+	text-align left
+._text-right
+	text-align right
+._text-center
+	text-align center
+._flex
+	display flex
+._v-center
+	align-items center
+._h-center
+	justify-content center
+._flex-col
+	display flex
+	flex-direction column
+._m-none
+	@media (max-width: 756px)
+		display none !important
+
+h2
+  font-size 42px
+
+h1
+  font-size 55px
+
+h3
+  font-size 24px
+
+.scroll-hidden
+  overflow hidden
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill
+  -webkit-box-shadow: none !important
+  transition: background-color 5000s ease-in-out 0s !important
+.text-center
+  text-align center
+
+a
+  text-decoration none
+  color $black
+button:focus
+  outline none
+ul
+  list-style-type none
+input:-webkit-autofill
+  background none !important
+.container
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width 100%
+		
+@media (min-width: 1200px)
+  .container
+    max-width 1200px
+    padding-left 0
+    padding-right 0
+				
+figure
+  margin 0
+  position relative
+button
+  &:focus
+    outline none !important
+input[type="submit"]
+  &:focus
+    outline none !important
+.flex
+  display flex;
+
+.wrapper-nav
+  padding-top 30px
+  padding-bottom 30px
+  display flex
+  justify-content space-between
+  align-items center
+
+nav
+  background rgba(0,0,0,0)
+  position fixed 
+  top 0
+  left 0
+  width 100%
+  z-index 2
+  a
+    color $whiteSmoke
+    font-size 14px
+    text-transform uppercase
+    font-weight 700
+  ul
+    padding 0
+    margin 0
+    display flex
+    li
+      margin-right 15px
+      &:last-child
+        margin-right 0
+.header-logo
+  img 
+    width 200px
+    height auto
+
+.swiper-container
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+.swiper-slide 
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-size cover 
+  overflow hidden
+  > .container
+    z-index 2
+  &:first-of-type
+    color white
+    h2
+      margin 0
+      color $blue
+    h2,h3
+      text-align center
+      text-align right
+    h3
+      font-weight 300
+      margin 0
+    h1
+      margin 0
+      text-align right
+      padding-left 30%
+  &:before 
+    content '';
+    width 100%
+    height 100%
+    background #318de8
+    position absolute
+    top 0
+    left 0
+    opacity .85
+
+.badge-black
+  z-index: -1;
+  background-color: #2e3237;
+  visibility: visible;
+  border-color: #707070;
+  border-style: none;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  color: #fff;
+  width: 60%;
+  height: 50%;
+  transform: matrix3d(1,0,0,0,-.309017,.951057,0,0,0,0,1,0,0,0,0,1) translateY(-50%);
+  transform-origin: 50% 50% 0;
+  position: absolute;
+  top: 50%;
+  right: -280px;
+  &:after
+    content: '';
+    z-index: 99;
+    background-color: #2e3237;
+    visibility: visible;
+    overflow: hidden;
+    border-color: #707070;
+    border-style: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    color: #fff;
+    width: 105%;
+    height: 100%;
+    transform-origin: 50% 50% 0;
+    position: absolute;
+    top: 10%;
+    opacity: 0.5;
+    right: 0;
+.bg-home
+  position relative
+  .swiper-pagination-bullet
+    background white
+
+section
+  padding-top 30px;
+  padding-bottom 30px
+
+.section-client
+  background $whiteSmoke
+  position relative
+  padding-top 70px
+  padding-bottom 70px
+  padding-right 10%
+  padding-left 10%
+.wrapper-client
+  width 100%
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  margin -15px
+  img
+    height 35px
+    width auto
+    position relative
+    margin 15px
+    filter grayscale(1)
+    transitionEase()
+    &:hover
+      filter unset
+.wrapper-client
+  display inline-flex
+
+.section-experience
+  background $whiteSmoke
+  padding-left 10%
+  padding-right 10%
+  padding-top 0
+.main-wrapper-experience
+  display flex
+  justify-content space-between
+  padding-left 0px
+  padding-right 0px
+.experience-count
+  display flex
+  width 50%
+  flex-wrap wrap
+  margin-left -65px
+
+.wrapper-experience
+  display flex
+  width 50%
+  flex-direction column
+  align-items center
+  justify-content center
+  padding 15px;
+
+.exp-header,.exp-desc
+  color $black
+
+.exp-header
+  font-size 50px
+  font-weight bold
+
+.exp-desc
+  font-size 17px
+  font-weight normal
+
+.experience-video
+  width 50%
+  video
+    width 100%
+    height 300px;
+
+.wrapper-video
+  position: relative;
+  display: inline-block;
+
+.blurEffect
+  -webkit-filter: blur(0px);
+  -o-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+
+.content-video
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  color: #FFF;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+
+.play
+  font-size: 50px;
+  cursor: pointer;
+  border: 1px solid $blue;
+  display: inline-block;
+  text-align: center;
+  padding: 17px 20px 17px 30px;
+  border-radius: 100px;
+  background $blue
+  &:hover
+    color: $blue;
+    background white
+
+.wrapper-approach
+  background white;
+
+.wrapper-header-approach
+  display flex
+  flex-direction column
+  align-items center
+  h3
+    text-align center
+    margin 30px 0 10px
+  span
+    font-weight 300
+    color $brown
+  
+.wrapper-step-approach
+  display flex
+  align-items center
+  margin-top 70px
+  position relative
+  .wrapper-step
+    display flex
+    flex-direction column
+    align-items center
+    text-align center
+    padding 0 30px
+  .img-step
+    width 155px
+    height 155px
+    border 6px solid $blue
+    border-radius 100%
+    overflow hidden
+    position relative
+    &:after
+      content ''
+      width 100%
+      height 100%
+      border-radius 100%
+      border 6px solid white
+      position absolute
+      left 0
+      top 0
+      z-index 5
+    img
+      width 100%
+      height auto
+
+.caption-step
+  h3
+    font-size 18px
+    text-transform uppercase
+    margin 70px 0 13px
+    font-weight 800
+  p
+    margin 0
+    font-size 14px
+    font-weight 400
+    font-family $openSans
+    line-height 26px
+    color $brown
+
+.dot
+  position absolute
+  top 70px
+  left 50%
+  transform translateX(-50%)
+  width 60%
+  height: 15px;
+  background radial-gradient(circle farthest-side, $blue, $blue 60%, transparent 60%, transparent);
+  background-size: 15px 15px;
+  .dot-filled
+    width 150px
+    height 15px
+    position absolute
+    animation: slide 5s infinite;
+    animation-delay 1s
+    transition .25s ease all
+    &:after
+      width 100%
+      height 15px
+      background radial-gradient(circle farthest-side, $black, $black 60%, transparent 60%, transparent);
+      background-size: 15px 15px;
+      position absolute
+      z-index 3
+      content ''
+    &:before
+      content ''
+      background white
+      width 100%
+      height 100%
+      z-index 1
+      position absolute
+      left 0
+
+@keyframes slide
+  for i in 0..10
+    {10% * i}
+      margin-left (i * 15)px

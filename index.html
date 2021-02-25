@@ -4,17 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
-  <link href="assets/css/swiper.css" rel="stylesheet">
-  <link href="assets/css/tailwind.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="dist/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- ... -->
 </head>
 <body>
   <nav>
-    <div class="container">
+    <div class="container wrapper-nav">
       <div class="header-logo">
         <img src="assets/img/header-logo.png" alt="logo"/>
       </div>
@@ -43,31 +40,162 @@
     </div>
   </nav>
 
-  <div>
-    <!-- Swiper -->
+  <div class="bg-home">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          
+        <div class="swiper-slide" style="background-image:url(./assets/img/roy-flip.webp)">
+          <div class="container">
+            <h3>
+              A New Way Of Learning
+            </h3>
+            <h1>
+              The quality of your communication
+              determines your business success
+            </h1>
+            <div class="badge-black"></div>
+            <h2>
+              Discover Yourself!
+            </h2>
+          </div>
         </div>
-        <div class="swiper-slide">Slide 2</div>
         <div class="swiper-slide">Slide 3</div>
         <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
       <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
     </div>
   </div>
 
+  <section class="section-client">
+    <div class="container">
+      <div class="wrapper-client">
+        <img src="assets/img/gojek-logo.webp">
+        <img src="assets/img/cinema-logo.webp">
+        <img src="assets/img/delegation-logo.webp">
+        <img src="assets/img/mind-logo.webp">
+        <img src="assets/img/ombudsman-logo.webp">
+        <img src="assets/img/unicef-logo.webp">
+      </div>
+    </div>
+  </section>
+   
+  <section class="section-experience">
+    <div class="container">
+      <div class="main-wrapper-experience">
+        <div class="experience-count">
+          <div class="wrapper-experience">
+            <span class="exp-header">
+              1800+
+            </span>
+            <span class="exp-desc">
+              Happy Clients
+            </span>
+          </div>
+          <div class="wrapper-experience">
+            <span class="exp-header">
+              16
+            </span>
+            <span class="exp-desc">
+              Project
+            </span>
+          </div>
+          <div class="wrapper-experience">
+            <span class="exp-header">
+              1800+
+            </span>
+            <span class="exp-desc">
+              Happy Clients
+            </span>
+          </div>
+          <div class="wrapper-experience">
+            <span class="exp-header">
+              1800+
+            </span>
+            <span class="exp-desc">
+              Happy Clients
+            </span>
+          </div>
+        </div>
+        <div class="experience-video">
+          <div class="wrapper-video">
+            <video class="video blurEffect"> 
+                <source src="assets/img/video.mov"> 
+            </video>
+                <div class="content-video">
+                    <div class="play">►</div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-approach">
+    <div class="container">
+      <div class="wrapper-approach">
+        <div class="wrapper-header-approach">
+          <h3>
+            Our Approach
+          </h3>
+          <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ullam culpa sint quae recusandae?
+          </span>
+        </div>
+        <div class="wrapper-step-approach">
+          <div class="dot">
+            <div class="dot-filled">
+              
+            </div>
+          </div>
+          <div class="wrapper-step">
+            <div class="img-step">
+              <img src="assets/img/step1.jpg">
+            </div>
+            <div class="caption-step">
+              <h3>
+                Why Choose Us
+              </h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              </p>
+            </div>
+          </div>
+          <div class="wrapper-step">
+            <div class="img-step">
+              <img src="assets/img/step2.jpg">
+            </div>
+            <div class="caption-step">
+              <h3>
+                Why Choose Us
+              </h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              </p>
+            </div>
+          </div>
+          
+          <div class="wrapper-step">
+            <div class="img-step">
+              <img src="assets/img/step3.jpg">
+            </div>
+            <div class="caption-step">
+              <h3>
+                Why Choose Us
+              </h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
   
   <script src="assets/js/jquery.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
