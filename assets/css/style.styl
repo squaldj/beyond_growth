@@ -4,6 +4,9 @@ $blue = rgb(35, 136, 237);
 $whiteSmoke = #f0f3f7
 $brown = #777
 $openSans = 'Open Sans', sans-serif;
+$darkBlue = #093b6e
+$lightBlue = #2388ed
+$inputBg = #f1f3f7
 
 transitionEase()
   transition .25s ease all
@@ -12,9 +15,11 @@ transitionEase()
   box-sizing border-box
 html, body
   margin 0
+  background white
   -webkit-font-smoothing subpixel-antialiased
   -webkit-text-stroke 1px rgba(0,0,0,0)
   font-family 'Montserrat', sans-serif
+  // line-height 26px
 // modifier
 ._text-left
 	text-align left
@@ -34,6 +39,9 @@ html, body
 ._m-none
 	@media (max-width: 756px)
 		display none !important
+._w50
+  width 50%
+
 
 h2
   font-size 42px
@@ -47,6 +55,19 @@ h3
 .scroll-hidden
   overflow hidden
 
+img 
+  width 100%
+  height auto
+
+input, textarea
+  padding 14px 12px
+  color $grey
+  font-size 12px
+  font-family $openSans
+  background white
+  border 1px solid rgba(0,0,0,0)
+  margin 0
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus
@@ -55,6 +76,29 @@ input:-webkit-autofill
   transition: background-color 5000s ease-in-out 0s !important
 .text-center
   text-align center
+
+button
+  background white
+  border 2px solid $blue
+  transition all .50s ease
+  padding 12px 30px
+  font-size 14px
+  color $blue
+  font-family $openSans
+  border-radius 100px
+  &:hover
+    cursor pointer
+    background $blue
+    border-color white
+    color white
+  &.invert
+    background $blue
+    color white
+    border-color $blue
+    &:hover
+      background white
+      color $blue
+      border-color $blue
 
 a
   text-decoration none
@@ -75,8 +119,6 @@ input:-webkit-autofill
 @media (min-width: 1200px)
   .container
     max-width 1200px
-    padding-left 0
-    padding-right 0
 				
 figure
   margin 0
@@ -96,6 +138,7 @@ input[type="submit"]
   display flex
   justify-content space-between
   align-items center
+  position relative
 
 nav
   background rgba(0,0,0,0)
@@ -104,6 +147,21 @@ nav
   left 0
   width 100%
   z-index 2
+  transition all .50s ease
+  height 120px
+  z-index 100
+  .black
+    position absolute
+    left: 30px;
+    top: 30px;
+    opacity 0
+  &.active
+    background white
+    height 90px
+    a
+      color $black
+    .black
+      opacity 1
   a
     color $whiteSmoke
     font-size 14px
@@ -120,7 +178,7 @@ nav
 .header-logo
   img 
     width 200px
-    height auto
+    height 25px
 
 .swiper-container
   width: 100%;
@@ -134,6 +192,7 @@ nav
   align-items: center;
   font-size: 18px;
   background: #fff;
+  width 100%
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,12 +246,13 @@ nav
   padding: 0;
   color: #fff;
   width: 60%;
-  height: 50%;
+  height: 60%;
   transform: matrix3d(1,0,0,0,-.309017,.951057,0,0,0,0,1,0,0,0,0,1) translateY(-50%);
   transform-origin: 50% 50% 0;
   position: absolute;
   top: 50%;
   right: -280px;
+  display none
   &:after
     content: '';
     z-index: 99;
@@ -214,12 +274,14 @@ nav
     right: 0;
 .bg-home
   position relative
+  overflow hidden
   .swiper-pagination-bullet
     background white
 
 section
   padding-top 30px;
   padding-bottom 30px
+  position relative
 
 .section-client
   background $whiteSmoke
@@ -235,7 +297,7 @@ section
   flex-wrap wrap
   margin -15px
   img
-    height 35px
+    height 30px
     width auto
     position relative
     margin 15px
@@ -307,7 +369,7 @@ section
   color: #FFF;
   width: 100%;
   text-align: center;
-  z-index: 999;
+  z-index: 99;
 
 .play
   font-size: 50px;
@@ -321,6 +383,9 @@ section
   &:hover
     color: $blue;
     background white
+
+.section-approach
+  padding-bottom 70px
 
 .wrapper-approach
   background white;
@@ -389,35 +454,441 @@ section
 .dots
   position absolute
   width 70%
-  height 23px
+  height 20px
   top 70px
   left 50%
   transform translateX(-50%)
   svg
     z-index 99
-    position relative
+    position absolute
+    height 100%
+    width 100%
+    top 50%
+    transform translateY(-50%)
 
 .dots-color
   background $blue
   width 100%
-  height 23px
+  height 10px
   position absolute
   left 0
-  top 0
+  top 50%
+  transform translateY(-50%)
   z-index 2
 
 .dots-color-dark
   background $black
   width 100px
-  height 23px
+  height 10px
   position absolute
-  top 0
+  top 50%
+  transform translateY(-50%)
   left 0%
   z-index 4
   animation slide 15s infinite
 
+.section-academy
+  padding 0
+  width 100%
+  display flex
+  flex-wrap wrap
+  background $blue
+
+.wrapper-academy
+  min-width 25%
+  display flex 
+  flex-direction column
+  color white
+  padding 50px 40px
+  background-size cover
+  background-position center
+  flex 1
+  &:nth-child(3)
+    flex-grow 10
+  span
+    font-size 13px
+    font-family $openSans
+    color $whiteSmoke
+    margin 0
+  h3
+    margin 0 0 15px
+    font-size 22px
+    color white
+  
+  p
+    margin 0
+    font-size 14px
+    line-height 26px
+    
+
+.darkBlue
+  background $darkBlue
+
+.lightBlue
+  background $lightBlue
+
+.wrapper-story
+  display flex
+  justify-content space-between
+  padding-top 40px
 
 
+.wrapper-story
+  .wrapper-caption, .wrapper-image
+    position relative
+  .wrapper-caption
+    width 50%
+    p
+      line-height 26px
+      font-size 14px
+      color $grey
+      font-weight 400
+      font-family $openSans
+      width 80%
+      &.light
+        font-size 16px
+        margin-bottom 15px
+        font-weight 300
+    span
+      color $blue
+      font-family $openSans
+      font-weight 300
+      font-size 13px
+      display block
+    h3
+      margin 5px 0 11px
+      font-size 28px
+      color $black
+      font-weight 700
+      span
+        color inherit 
+        font-size inherit
+        font-family inherit
+        font-weight inherit
+  svg
+    position absolute
+    left 0
+    right 0
+    top -20px
+    transform scale(1.2)
+    z-index 1
+  .wrapper-image
+    padding-top 30px
+    width 40%
+    img
+      box-shadow rgba(0,0,0,0.4) 0 0 40px 5px
+      width 100%
+      height auto
+      position relative
+      z-index 2
+
+.section-team
+  position relative
+  .container
+    z-index 2
+    position relative
+
+.wrapper-header-team
+  color $whiteSmoke
+  margin-top 20px
+  span
+    font-family $openSans
+    font-size 14px
+    font-weight 400
+  h3
+    margin 0
+    font-size 32px
+    font-weight 700
+
+
+.background-team
+  background-size cover
+  background-position center
+  position absolute
+  width 100%
+  height 269px
+  left 0
+  top 0
+  z-index 1
+
+.wrapper-grid-team
+  display grid
+  grid-template-columns 1fr 1fr 1fr 1fr
+  grid-gap 22px
+  background white
+  padding 22px
+  margin-top 50px
+  .item-team
+    width 100%
+    img
+      width 100%
+      height auto
+      margin-bottom 16px
+    h3
+      margin 0
+      font-size 17px 
+    span
+      margin 0
+      font-family $openSans
+      font-size 14px
+      font-weight 400
+      color $black
+      display block
+
+.section-story
+  padding-bottom 80px
+  overflow hidden
+
+.section-services
+  padding-top 0
+  .caption-step
+    margin-top 30px
+  .wrapper-step-approach
+    .dots
+      top 30px
+  .wrapper-step
+    .img-step
+      border-radius 0px
+      color $black
+      border none
+      border-color transparent
+      width 100%
+      z-index 2
+      position relative
+      height 80px
+      h1
+        font-size 27px
+        margin 0
+        span
+          font-size 47px
+          color $blue
+          font-family $openSans
+      &:after
+        background: white;
+        z-index: -1;
+        border-color: rgba(0,0,0,0);
+        width: 80%;
+        border-radius: 0;
+        top: 50%;
+        height: 50%;
+        left: 13%;
+        transform: translateY(-50%);
+
+.section-testimonial
+  padding-top 70px
+  .swiper-container
+    width 100%
+    height 400px
+  .swiper-slide
+    display grid
+    grid-template-columns 1fr 1fr 1fr
+    grid-gap 22px
+    &:before
+      display none
+
+.item-testimonial
+  width 100%
+  display flex
+  flex-direction column
+  height 100%
+  h3,span
+    color $black
+    text-align center !important
+  h3
+    font-weight 700 !important
+    font-size 22px
+    margin-top 5px !important
+  span
+    font-family $openSans
+    font-weight 400
+    color $grey
+    font-size 14px
+  .testimonial
+    background $blue
+    padding 20px
+    color white
+    position relative
+    z-index 2
+    text-align center
+    line-height 26px
+    font-size 15px
+    font-style italic
+    &:after
+      content ''
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid $blue;
+      position absolute
+      left 50%
+      top 50%
+      transform translateX(-50%)
+      z-index -1
+
+.testimonial-image
+  width 75px
+  height 75px
+  overflow hidden
+  border-radius 100%
+  margin-left auto
+  margin-right auto
+  margin-top 20px
+  img
+    width 100%
+    height auto
+
+.wrapper-testimonial
+  padding-left 70px
+  padding-right 70px
+
+.feed 
+  width: 200px
+  float left
+  h3
+    margin 8px 0
+    font-weight 700
+  span, p
+    font-weight 400
+    color $brown
+  span
+    font-size 16px
+  p
+    font-size 14px
+    font-weight 300
+    position relative
+    &:after
+      content ''
+      position absolute
+      top 0
+      left 0
+      background: linear-gradient(4deg,rgba(255,255,255,1)0%,rgba(255,255,255,.1) 100%)
+      width 100%
+      height 100%
+
+.wrapper-collection-feed
+  display grid
+  grid-template-columns 1fr 1fr 1fr
+  grid-gap 22px
+
+.wrapper-feed
+  display flex
+  align-items center
+  flex-direction column
+  h2
+    font-size 27px
+    font-weight bold
+    color $black
+    font-family $openSans
+
+.section-map
+  padding 0
+#map
+  height 350px
+  width 100%
+
+.section-contact
+  padding-top 60px
+  padding-bottom 70px
+  background $whiteSmoke
+  button
+    max-width 300px
+    margin-left auto
+    margin-right auto
+    margin-top 20px
+
+.wrapper-contact
+  display flex
+  flex-direction column
+  > span, > h2, > p
+    text-align center
+  > h2
+    margin 0 0 10px
+    font-size 28px
+    font-weight 700
+  > p
+    font-size 18px 
+    font-weight 400
+    font-family $openSans
+    color $grey
+    margin 0
+  span
+    &.blue
+      font-size 13px
+      font-family $openSans
+      font-weight 400
+      color $blue
+
+.wrapper-field
+  margin-top 65px
+  display flex
+  .left-contact
+    width 40%
+    display flex
+    flex-direction column
+    justify-content space-between
+  .right-contact
+    width 60%
+    padding-left 10%
+
+.contact-caption
+  padding-left 15px
+  h3
+    font-size 17px
+    font-weight 700
+    margin 0
+  p
+    font-size 14
+    font-weight 400
+    font-family $openSans
+    color $grey
+    margin 0 0 30px
+
+.wrapper-icon
+  display flex
+  img
+    width 37px
+    height 37px
+    &.address
+      width 57px
+
+.right-contact
+  display flex
+  flex-wrap wrap
+  > input[name='name']
+    width calc(50% - 5px)
+    margin-right 5px
+    max-height 44px
+  > input[name='email']
+    width calc(50% - 5px)
+    margin-left 5px
+    max-height 44px
+  > input[name='subject']
+    width 100%
+    max-height 44px
+  > textarea
+    width 100%
+    min-height 165px
+
+.section-footer
+  padding-top 50px
+  padding-bottom 50px
+
+.wrapper-footer
+  display flex
+  justify-content center
+  align-items center
+  background white
+  img
+    width 75px
+    height auto
+    margin-left 30px
+  span
+    font-size 14px
+    font-family $openSans
+    font-weight 400
+    color $grey
+  
 @keyframes slide
   0%
     left 0%
@@ -425,3 +896,182 @@ section
     left 50%
   100%
     left 90%
+
+.navbar-mobile
+  display none
+
+@media (max-width: 800px)
+  .exp-header
+    font-size 27px
+  .section-client
+    padding-top 50px
+    padding-bottom 50px
+    padding-left 30px
+    padding-right 30px
+  .wrapper-experience
+    align-items flex-start
+  .section-services 
+    .wrapper-step-approach 
+      .dots
+        top 13px
+    .wrapper-step 
+      .img-step 
+        transform none !important
+        h1
+          font-size 27px
+          background white
+          span
+            font-size 30px
+
+@media (max-width: 600px)
+  .img-step
+    transform none !important
+  .wrapper-step-approach 
+    .img-step
+      width 100%
+      height auto
+  .dots
+    display none !important
+  .feed
+    width 100%
+  .swiper-slide
+    &:first-of-type 
+      h1
+        font-size 32px
+        padding-left 0
+      h2
+        font-size 27px
+  .badge-black
+    right -10px
+    width 100%
+    height 50%
+  .main-wrapper-experience
+    flex-direction column
+  .experience-count
+    width 100%
+    margin-left 0
+  .experience-video
+    margin-top 20px
+    width 100%
+  .section-experience
+    padding-left 0
+    padding-right 0
+  .section-client
+    padding-left 0
+    padding-right 0
+  .wrapper-client
+    margin 0
+    justify-content flex-start
+  .wrapper-step
+    width 100%
+  .wrapper-step-approach
+    flex-wrap wrap
+  .caption-step 
+    p
+      margin-bottom 50px
+    h3
+      margin-top 30px
+  .wrapper-academy
+    width 100%
+    flex unset
+    min-height 238px
+    flex-grow unset
+    flex-shrink unset
+  .wrapper-story 
+    flex-wrap wrap
+    .wrapper-caption
+      width 100%
+      p
+        width 100%
+    .wrapper-image
+      width 100%
+  .wrapper-grid-team
+    grid-template-columns 1fr
+  .wrapper-testimonial
+    padding-left 0
+    padding-right 0
+  .section-testimonial 
+    .swiper-container
+      height auto
+    .swiper-slide
+      width 100%
+      grid-template-columns 1fr
+  .item-testimonial
+    margin-bottom 30px
+  .wrapper-collection-feed
+    grid-template-columns 1fr
+    grid-gap 50px
+  .wrapper-feed
+    button 
+      margin 50px 0px
+  .feed 
+    p:after
+      display none
+  .wrapper-field
+    flex-wrap wrap
+    .left-contact
+      width 100%
+    .right-contact
+      width 100%
+      padding 20px 0 0
+      > input[name='subject']
+        margin 10px 0
+  .wrapper-contact span.blue
+    margin-bottom 10px
+  .wrapper-footer img
+    width 45px
+  .wrapper-client
+    img
+      width auto
+      height 20px
+  nav
+    ul
+      display none
+    &.active
+      .hamburger
+        div
+          background-color $black
+  .hamburger
+    &.force
+      div
+        background-color $black !important
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 45px;
+    z-index: 100;
+    div
+      position: relative;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #fff;
+      margin-top: 5px;
+      transition: all .3s ease-in-out;
+  .hamburger.active .top-bun
+    transform: rotate( -45deg );
+    margin-top: 15px;
+  .hamburger.active .bottom-bun
+    opacity: 0;
+    transform: rotate(45deg); 
+  .hamburger.active .meat
+    transform: rotate( 45deg );
+    margin-top: -3px;
+  .navbar-mobile
+    padding 30px
+    width 100%
+    height 100%
+    position fixed
+    top 0px
+    left 0
+    background white
+    flex-direction column
+    padding-top 100px
+    > a
+      color $black
+      display none
+      padding 17px 0
+      text-align right
+      &:first-child
+        padding-top 0
