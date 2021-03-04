@@ -19,6 +19,7 @@ html, body
   -webkit-font-smoothing subpixel-antialiased
   -webkit-text-stroke 1px rgba(0,0,0,0)
   font-family 'Montserrat', sans-serif
+  color $black
   // line-height 26px
 // modifier
 ._text-left
@@ -33,6 +34,10 @@ html, body
 	align-items center
 ._h-center
 	justify-content center
+._space-around
+  justify-content space-around
+._space-between
+  justify-content space-between
 ._flex-col
 	display flex
 	flex-direction column
@@ -133,44 +138,37 @@ input[type="submit"]
   display flex;
 
 .wrapper-nav
-  padding-top 30px
-  padding-bottom 30px
+  padding-top 20px
+  padding-bottom 20px
   display flex
   justify-content space-between
   align-items center
   position relative
 
 nav
-  background rgba(0,0,0,0)
+  background white
   position fixed 
   top 0
   left 0
   width 100%
   z-index 2
   transition all .50s ease
-  height 120px
   z-index 100
   .black
     position absolute
     left: 30px;
     top: 30px;
     opacity 0
-  &.active
-    background white
-    height 90px
-    a
-      color $black
-    .black
-      opacity 1
   a
-    color $whiteSmoke
     font-size 14px
     text-transform uppercase
     font-weight 700
+    color $black
   ul
     padding 0
     margin 0
     display flex
+    align-items center
     li
       margin-right 15px
       &:last-child
@@ -186,8 +184,8 @@ nav
   margin-left: auto;
   margin-right: auto;
 
-.swiper-slide 
-  min-height: 100vh;
+.wrapper-home 
+  height: 100%;
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -275,6 +273,8 @@ nav
 .bg-home
   position relative
   overflow hidden
+  margin-top 91px
+  height calc(100vh - 91px)
   .swiper-pagination-bullet
     background white
 
@@ -312,7 +312,7 @@ section
   background $whiteSmoke
   padding-left 10%
   padding-right 10%
-  padding-top 0
+  padding 80px 0
 .main-wrapper-experience
   display flex
   justify-content space-between
@@ -323,6 +323,7 @@ section
   width 50%
   flex-wrap wrap
   margin-left -65px
+  padding 50px 0
 
 .wrapper-experience
   display flex
@@ -345,6 +346,7 @@ section
 
 .experience-video
   width 50%
+  margin-top -120px
   video
     width 100%
     height 300px;
@@ -371,6 +373,24 @@ section
   text-align: center;
   z-index: 99;
 
+.content-video-caption
+  position absolute
+  bottom 20px
+  background white
+  color $black
+  left 50%
+  transform translateX(-50%)
+  padding 15px 20px
+  h1
+    font-size 18px
+    margin 0
+    font-weight bold
+  h2
+    font-size 13px
+    font-family $openSans
+    font-weight 400
+    margin 0
+
 .play
   font-size: 50px;
   cursor: pointer;
@@ -385,7 +405,7 @@ section
     background white
 
 .section-approach
-  padding-bottom 70px
+  padding-bottom 100px
 
 .wrapper-approach
   background white;
@@ -400,6 +420,21 @@ section
   span
     font-weight 300
     color $brown
+
+.caption-video
+  font-size 18px
+  color white
+  background $black
+  width 80%
+  margin-left auto
+  margin-right auto
+  padding 30px
+  font-weight 300
+  text-align center
+  font-family $openSans
+  position relative
+  margin-bottom -100px
+  margin-top -4px
   
 .wrapper-step-approach
   display flex
@@ -493,6 +528,7 @@ section
   display flex
   flex-wrap wrap
   background $blue
+  z-index 10
 
 .wrapper-academy
   min-width 25%
@@ -888,6 +924,200 @@ section
     font-family $openSans
     font-weight 400
     color $grey
+
+.navbar-mobile
+  display none
+
+.section-business
+  position relative
+  padding 70px 0
+  > .container
+    > h3
+      text-align center
+      margin 30px 0 0
+    > h4
+      margin 0
+      text-align center
+      font-family $openSans
+      color $black
+      font-weight 400
+      img
+        display: inline;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        transform: rotate(-12deg);
+        top: 5px;
+
+.wrapper-stripes
+  position absolute
+  z-index 3
+  top 0
+  left 10%
+  width 100px
+  height 100px
+
+.wrapper-business
+  img
+    width 88px
+    height 88px
+  
+.wrapper-content-business
+  flex-wrap wrap
+
+.border-gradient
+  background: linear-gradient(180deg,#2388ed 0%,#34be76 80%);
+
+.business-gradient
+  background: linear-gradient(180deg,#2388ed 0%,#34be76 80%);
+  position relative
+  width 322px
+  height 207px
+  margin-top 50px
+  transition all .50s ease
+  &:hover
+    padding 10px
+    cursor pointer
+.business
+  background-size cover
+  background-repeat no-repeat
+  position relative
+  width 100%
+  height 100%
+  color white
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  &:before
+    content '';
+    width 100%
+    height 100%
+    background $darkBlue
+    position absolute
+    top 0
+    left 0
+    opacity .80
+    z-index 2
+  .top
+    left 10px
+    top 0
+  .bot
+    right 10px
+    bottom 0
+    transform rotate(180deg)
+  .mini-logo
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 21px;
+    width: 27px;
+    z-index: 2;
+  .top,.bot
+    z-index 3
+    position absolute
+    width 76px
+    height 64px 
+  h3,h2
+    margin 0
+    text-align center
+    position relative
+    z-index 5
+  h3
+    font-size 11px
+    font-family $openSans
+    font-weight 300
+  h2
+    font-size 18px
+    font-weight bold
+
+.section-certification
+  background $blue
+  color white
+  h3
+    margin 0
+    font-size 17px
+    font-family $openSans
+
+.wrapper-certification
+  > div
+    margin-right 15px
+    img
+      width 87px
+      height auto
+  .border-gradient
+    border-radius 200px
+    padding: 30px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    position relative 
+    > div
+      position relative
+      z-index 9
+    &:before
+      content: '';
+      width: 92%;
+      height: 92%;
+      left: 6px;
+      top: 50%;
+      position: absolute;
+      background: #fff;
+      z-index: 1;
+      border-radius: 100%;
+      transform: translateY(-50%);
+
+.section-service-new
+  background white
+  h2
+    position relative
+    font-size 24px
+    text-align center
+    font-weight bold
+    img
+      position: absolute;
+      width: 41px;
+      height: 22px;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-300%) rotate(-24deg);
+
+.wrapper-service-new
+  display flex
+  flex-wrap wrap
+  min-height 200px
+
+.service-new
+  width 50%
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  padding 50px
+  img
+    width 76px
+    margin-bottom 20px
+    height auto
+    margin-left auto
+    margin-right auto
+    display block
+  h2
+    font-weight 400
+    font-family $openSans
+    font-size 20px
+    margin 0
+    padding 0 90px
+  p
+    font-size 14px
+    font-weight 300
+    font-family $openSans
+    margin 0
+    text-align center
+
+
+// ------------------------------ RESPONSIVE
+
+
   
 @keyframes slide
   0%
@@ -896,9 +1126,6 @@ section
     left 50%
   100%
     left 90%
-
-.navbar-mobile
-  display none
 
 @media (max-width: 800px)
   .exp-header
