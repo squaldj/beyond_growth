@@ -38,7 +38,17 @@ $(document).ready(function(){
 })
 
 function backgroundAnimation() {
-  
+  let theIndex = 0
+  let total = $(".slide-show").length
+  setInterval(function(){
+    let i = theIndex+1 === total ? 0 : theIndex+1
+    console.log({i,theIndex, total})
+    $('.slide-show').eq(theIndex).fadeOut('slow', function(){
+      $(".slide-show").eq(i).fadeIn('slow', function(){
+        theIndex = theIndex === total-1 ? 0 : theIndex+1
+      })
+    })
+  }, 5000)
 }
 
 function theTyping(){
