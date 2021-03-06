@@ -16,13 +16,6 @@ var swiper = new Swiper('.swiper-container', {
 
 $(document).ready(function(){
   AOS.init({once: true,});
-  $('.play').click(function () {
-      if($(this).parent().prev().get(0).paused){
-          $(this).parent().prev().get(0).play();
-          $(this).parent().prev().removeClass('blurEffect');
-          $('.content').hide();
-      }
-  });
 
   $('.video').on('ended',function(){
       $(this).addClass('blurEffect');
