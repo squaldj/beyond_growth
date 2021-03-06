@@ -35,14 +35,33 @@ $(document).ready(function(){
   initMasonry()
   theTyping()
   backgroundAnimation()
+  postModal()
+  countJs()
 })
+
+function countJs(){
+  $(function() {
+    $(".counter").countimator();
+  });
+}
+
+function postModal(){
+  $(".business").click(function() {
+    const content = $(this).data('modal-content')
+    const header = $(this).data('modal-header')
+    $('#postModal').on('show.bs.modal', function(){  
+        $('#postModal').find('.modal-body').html(content);
+        $('#postModal').find('.modal-title').html(header);
+    })
+    $('#postModal').modal('show')
+  })
+}
 
 function backgroundAnimation() {
   let theIndex = 0
   let total = $(".slide-show").length
   setInterval(function(){
     let i = theIndex+1 === total ? 0 : theIndex+1
-    console.log({i,theIndex, total})
     $('.slide-show').eq(theIndex).fadeOut('slow', function(){
       $(".slide-show").eq(i).fadeIn('slow', function(){
         theIndex = theIndex === total-1 ? 0 : theIndex+1

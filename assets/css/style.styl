@@ -20,6 +20,9 @@ html, body
   -webkit-text-stroke 1px rgba(0,0,0,0)
   font-family 'Montserrat', sans-serif
   color $black
+
+kbd
+  font-family 'Montserrat', sans-serif !important
   // line-height 26px
 // modifier
 ._text-left
@@ -990,7 +993,7 @@ section
   width 322px
   height 207px
   margin-top 50px
-  transition all .50s ease
+  transition all .50s ease !important
   &:hover
     padding 10px
     cursor pointer
@@ -1286,7 +1289,7 @@ section
       color $grey
       margin 0
   .img-rounded
-    display: inline-flex;
+    display inline-block
     width: 15%;
     height: 100%;
     align-self center
@@ -1296,7 +1299,7 @@ section
     height auto
 
 .img-rounded
-  border-radius 100%
+  border-radius 100% !important
   overflow hidden
 
 .section-location
@@ -1390,6 +1393,10 @@ section
   color $black !important
   font-weight 300 !important;
   font-family $openSans
+
+.modal-title
+  font-size 24px
+  font-weight bold
 
 // ------------------------------ RESPONSIVE
 
@@ -1659,10 +1666,12 @@ section
       display inline-block
       margin 0 !important
     .swiper-button-prev
-      margin-left 50px !important
+      margin-left 0px !important
       margin-top 50px !important
 
 @media (max-width: 450px)
+  .wrapper-testimonial > ._flex-col
+    width 100%
   .category-btn
     margin-bottom 10px
   .content-video-caption
