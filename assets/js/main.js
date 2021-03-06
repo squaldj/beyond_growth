@@ -30,10 +30,70 @@ $(document).ready(function(){
   });
   growServices()
   growApproach()
-  scrollEffect()
   hamburger()
   badgeBlackShow()
+  initMasonry()
+  theTyping()
+  backgroundAnimation()
 })
+
+function backgroundAnimation() {
+  
+}
+
+function theTyping(){
+  var options = {
+    strings: typeCollection,
+    typeSpeed: 60,
+    backDelay: 3000,
+    backSpeed: 40,
+    loop: true,
+  };
+  
+  var typed = new Typed('.typing', options);
+}
+
+function initMasonry() {
+  let $container = $('.feed-masonry').isotope({
+    itemSelector: '.grid-item',
+    masonry: {
+      gutter: '.gutter-sizer'
+    },
+  })
+
+  $("#load-masonry").on('click', function(){
+      const el = getItem()
+      $container.isotope( 'insert', $(el) );
+      const remainingLength = itemsGrid.length
+      if (remainingLength === 0)
+        $("#load-masonry").fadeOut()
+  })
+
+  $(".category-btn").on('click', function(){
+    $(".category-btn").removeClass('active')
+    $(this).addClass('active')
+    const val = $(this).attr('data-choosen')
+    $container.isotope({ filter: `${val}` })
+  })
+
+  function getItem() {
+    let el = ''
+    const max = 10
+    let i = 0;
+    for(let i = 0; i < max ; i++) {
+      try {
+        el = el + `<div class="grid-item ${itemsGrid[i].theClass}"><img src="${itemsGrid[i].img}"/></div>`
+      } catch(er){
+        itemsGrid.splice(0, i)
+        break;
+      }
+      if (i === max - 1) {
+        itemsGrid.splice(0, max)
+      }
+    }
+    return el
+  }
+}
 
 function badgeBlackShow() {
   $(".badge-black").fadeIn()
