@@ -129,6 +129,7 @@ function hamburger() {
       $(this).removeClass('force')
       $(".navbar-mobile").fadeOut()
       $(".navbar-mobile a").fadeOut()
+      $(".navbar-mobile button").fadeOut()
     }
     else {
       $(this).addClass('active')
@@ -145,6 +146,9 @@ function hamburger() {
         }, 150*i);
         // each element should animate half a second after the last one.
       });
+      setTimeout(function(){
+        $(".navbar-mobile button").fadeIn()
+      }, 800)
     }
   });
 }
