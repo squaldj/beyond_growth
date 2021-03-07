@@ -7,6 +7,7 @@ $openSans = 'Open Sans', sans-serif;
 $darkBlue = #093b6e
 $lightBlue = #2388ed
 $inputBg = #f1f3f7
+$darkSlateBlue = #143544
 
 transitionEase()
   transition .25s ease all
@@ -315,14 +316,25 @@ section
   position relative
   padding-top 50px
   padding-bottom 50px
-  padding-right 10%
-  padding-left 10%
+  padding-right 8%
+  padding-left 8%
+  .swiper-button-prev
+    left 0px
+    transform scale(.5)
+    color $black
+  .swiper-button-next
+    right 0px
+    transform scale(.5)
+    color $black
+  
 .wrapper-client
   width 100%
   display flex
   justify-content space-around
   flex-wrap wrap
-  margin -15px
+  margin -15px 0
+  padding-left 70px
+  padding-right 70px
   img
     height 30px
     width auto
@@ -459,7 +471,7 @@ section
   width 70%
   margin-left auto
   margin-right auto
-  padding 30px
+  padding 20px 30px
   font-weight 300
   text-align center
   font-family $openSans
@@ -738,7 +750,7 @@ section
       display block
 
 .section-story
-  padding-bottom 80px
+  padding-bottom 50px
   overflow hidden
 
 .section-services
@@ -1265,8 +1277,8 @@ section
 
 .section-testimonial
   background $whiteSmoke
-  padding-bottom 100px
-  padding-top 70px
+  padding-bottom: 110px;
+  padding-top: 50px;
   .swiper-button-prev
     left 100px
     transform scale(.5)
