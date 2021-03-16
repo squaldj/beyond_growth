@@ -70,7 +70,7 @@ h3
 
 a
   transition all .50s ease
-  &:hover
+  &:hover,&:focus,&:visited
     text-decoration none !important
 
 img 
@@ -395,6 +395,10 @@ section
   position: relative;
   display: inline-block;
   z-index 5
+
+.wrapper-thumbnail-video
+  overflow hidden
+  border-radius 5px
 
 
 .blurEffect
@@ -1105,7 +1109,7 @@ section
   > div
     margin-right 15px
     img
-      width 87px
+      max-width 128px
       height auto
   .border-gradient
     border-radius 200px
@@ -1163,6 +1167,13 @@ section
     font-weight bold
     margin 0
     text-align left
+    display flex
+    align-items center
+    span
+      img
+        width 30px
+        height auto
+        margin-right 10px
 
 .hover-1
   position relative
@@ -1517,6 +1528,10 @@ section
   .wrapper-location
     grid-template-columns 1fr
 @media (max-width: 650px)
+  .wrapper-footer
+    span
+      &:first-child
+        margin-left 0
   .wrapper-grid-team 
     grid-template-columns 1fr
     padding-top 0
@@ -1712,6 +1727,17 @@ section
       margin-top 50px !important
 
 @media (max-width: 450px)
+  .wrapper-footer
+    flex-direction column
+    img
+      order: 1;
+      margin-top 20px
+    
+  .header-logo
+    img
+      width 180px
+  .hamburger
+    top 20px
   .featherlight .featherlight-inner
     width 100%
     max-height 300px
@@ -1748,6 +1774,13 @@ section
     flex-wrap wrap
     flex-direction column
     align-items center
+    img
+      width 50%
+      display block
+      margin auto
+    > div
+      margin-right 0
+      margin-bottom 15px
     .border-gradient
       width 50%
       height 150px

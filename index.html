@@ -76,7 +76,7 @@
     <div class="wrapper-home">
       <img src="assets/img/waldo.png" class="slide-show">
       <img src="assets/img/roy-flip.webp" class="slide-show _d-none">
-      <img src="assets/img/jesse.png" class="slide-show _d-none">
+      <img src="assets/img/jesse.jpg" class="slide-show _d-none">
       <div class="container">
         <h3 
           data-aos="fade-up-left"
@@ -190,7 +190,10 @@
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget. Suspendisse potenti. Curabitur euismod facilisis neque, eu malesuada diam finibus non. Nullam nec vehicula leo. Morbi porta ante eu feugiat mollis.
           </p>
-          <button>OUR STORY</button>
+          <button class="modal-trigger"
+          data-modal-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget. Suspendisse potenti. Curabitur euismod facilisis neque, eu malesuada diam finibus non. Nullam nec vehicula leo. Morbi porta ante eu feugiat mollis."
+          data-modal-header="Our Story"
+          >OUR STORY</button>
         </div>
 
         <div class="wrapper-image">
@@ -207,7 +210,7 @@
           data-aos-anchor-placement="center-bottom"
           data-aos-delay="300"
           data-aos-duration="600"
-          src="assets/img/group.png">
+          src="assets/img/group.jpg">
         </div>
       </div>
     </div>
@@ -395,9 +398,9 @@
           data-aos-anchor-placement="center-bottom"
           href="https://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
           class="wrapper-video">
-            <video class="video blurEffect"> 
-                <source src="assets/img/video.mov"> 
-            </video>
+            <div class="wrapper-thumbnail-video">
+              <img src="assets/img/video-thumbnail.jpg" />
+            </div>
             <div class="content-video">
                 <div class="play">►</div>
             </div>
@@ -686,30 +689,20 @@
           International Certified
         </h3>
         <div class="wrapper-certification _flex">
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/certification-astch.webp">
-            </div>
+          <div>
+            <img src="assets/img/astch-border.png">
           </div>
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/BB.png">
-            </div>
+          <div>
+            <img src="assets/img/BB-border.png">
           </div>
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/BG.png">
-            </div>
+          <div>
+            <img src="assets/img/bg-border.png">
           </div>
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/DISC.png">
-            </div>
+          <div>
+            <img src="assets/img/disc-border.png">
           </div>
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/EQ.png">
-            </div>
+          <div>
+            <img src="assets/img/eq-border.png">
           </div>
         </div>
         <h3>
@@ -731,6 +724,9 @@
           data-aos="fade-right"
         >
           <h3>
+            <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
             PRE-TRAINING ASSESSMENT (PTA)
           </h3>
         </div>
@@ -740,6 +736,9 @@
           data-aos="fade-right"
         >
           <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
             IN HOUSE TRAINING / WORKSHOP
           </h3>
         </div>
@@ -749,6 +748,9 @@
           data-aos="fade-right"
         >
           <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
             ONLINE TRAINING
           </h3>
         </div>
@@ -758,6 +760,9 @@
           data-aos="fade-right"
         >
           <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
             POST-TRAINING EVALUATION (PTE)
           </h3>
         </div>
@@ -767,6 +772,9 @@
           data-aos="fade-right"
         >
           <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
             ON-THE-JOB COACHING
           </h3>
         </div>
@@ -776,6 +784,9 @@
           data-aos="fade-right"
         >
           <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
             PERSONAL COACHING
           </h3>
         </div>
@@ -785,6 +796,9 @@
           data-aos="fade-right"
         >
           <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
             BUSINESS CASE CONSULTANCY
           </h3>
         </div>
@@ -793,7 +807,7 @@
   </section>
 
   <section class="section-team">
-    <div class="background-team" style="background-image: url(assets/img/celebration.png)">
+    <div class="background-team" style="background-image: url(assets/img/celebration.jpg)">
     </div>
     <div class="container">
       <div class="wrapper-team">
@@ -1239,10 +1253,12 @@
   </section> -->
 
   <section class="section-footer">
-    <div class="wrapper-footer">
-      <span>All Rights Reserved © 2016 - 2026</span>
-      <img src="assets/img/footer-logo-white.png">
-      <span>PT Solusi Bisnis Internasional</span>
+    <div class="container">
+      <div class="wrapper-footer">
+        <span>All Rights Reserved © 2016 - 2026</span>
+        <img src="assets/img/footer-logo-white.png">
+        <span>PT Solusi Bisnis Internasional</span>
+      </div>
     </div>
   </section>
 

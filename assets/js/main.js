@@ -39,7 +39,7 @@ function countJs(){
 }
 
 function postModal(){
-  $(".business").click(function() {
+  $(".business,.modal-trigger").click(function() {
     const content = $(this).data('modal-content')
     const header = $(this).data('modal-header')
     $('#postModal').on('show.bs.modal', function(){  
@@ -82,6 +82,11 @@ function initMasonry() {
       gutter: '.gutter-sizer'
     },
   })
+
+  $(window).scroll(function() {
+    $container.isotope('layout');
+  });
+
 
   $("#load-masonry").on('click', function(){
       const el = getItem()
