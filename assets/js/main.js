@@ -204,7 +204,7 @@ function growApproach(){
   let active = 0;
   $(".section-approach .img-step").eq(active).addClass('active')
   setInterval(function(){
-    const length = $("section-approach .img-step").length
+    const length = $(".section-approach .img-step").length
     const theIndex = active === length-1 ? active = 0 : active+=1
     $(".section-approach .img-step").eq(theIndex).addClass('active')
     $(".section-approach .img-step").eq(active-1).removeClass('active')
