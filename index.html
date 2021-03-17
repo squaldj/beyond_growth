@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="dist/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -15,32 +18,35 @@
     <div class="container wrapper-nav">
       <div class="header-logo">
         <img src="assets/img/header-logo.png" alt="logo"/>
+        <span>training consultancy</span>
       </div>
       <ul>
         <li>
-          <a href="#">
+          <a href="#home">
             Home
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#story">
             About Us
           </a>
         </li>
         <li>
-          <a href="#">
-            Training
+          <a href="#academy">
+            Academy
           </a>
         </li>
         <li>
-          <a href="#">
-            Contact Us
+          <a href="#services">
+            Services
           </a>
         </li>
         <li>
-          <button>
-            CONTACT US
-          </button>
+          <a href="#contact">
+            <button>
+              CONTACT US
+            </button>
+          </a>
         </li>
       </ul>
     </div>
@@ -50,23 +56,31 @@
       <div class="bottom-bun"></div>
     </label>
     <div class="navbar-mobile">
-      <a href="#">
+      <a href="#home">
         HOME
       </a>
-      <a href="#">
+      <a href="#story">
         ABOUT US
       </a>
-      <a href="#">
-        TRAINING
+      <a href="#academy">
+        Academy
       </a>
-      <a href="#">
-        CONTACT US
+      <a href="#services">
+        Services
+      </a>
+      <a href="#contact">
+        <button>
+          CONTACT US
+        </button>
       </a>
     </div>
   </nav>
 
-  <div class="bg-home">
-    <div class="wrapper-home" style="background-image:url(./assets/img/waldo.png)">
+  <div class="bg-home" id="home">
+    <div class="wrapper-home">
+      <img src="assets/img/waldo.png" class="slide-show">
+      <img src="assets/img/roy-flip.webp" class="slide-show _d-none">
+      <img src="assets/img/jesse.jpg" class="slide-show _d-none">
       <div class="container">
         <h3 
           data-aos="fade-up-left"
@@ -129,57 +143,93 @@
           </div>
           <div class="swiper-slide">
             <div class="wrapper-client">
-              <img 
-                  data-aos="fade-up"
-                  data-aos-duration="600"
-                  data-aos-delay="100"
-                src="assets/img/delegation-logo.webp">
+              <img src="assets/img/delegation-logo.webp">
+              <img src="assets/img/alodokter.png">
+              <img src="assets/img/antam mind id.png">
+              <img src="assets/img/glico.png">
+              <img src="assets/img/spots.png">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="wrapper-client">
+              <img src="assets/img/vospay.png">
+              <img src="assets/img/xiaomi.png">
             </div>
           </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
 
-  <section class="section-story">
+  <section class="section-story" id="story">
     <div class="container">
       <div class="wrapper-story">
         <div class="wrapper-caption">
           <span
           data-aos-duration="600"
           data-aos="zoom-out"
-          >LOREM IPSUM DOLOR SIT AMET</span>
+          >ONE DAY OR DAY ONE</span>
           <h3
           data-aos-duration="600"
           data-aos-delay="100"
           data-aos="fade-down"
           data-aos-anchor-placement="center-bottom"
           >
-            BeyondGrowth. We Provide <span>Training.</span>
+            Realize your <span 
+            class="typing"></span>
           </h3>
           <p class="light"
           data-aos="fade-right"
           data-aos-anchor-placement="center-bottom"
           data-aos-delay="150"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.
+          Beyond Growth (BG) is a training and consultancy firm specialized in
+          soft skills development, headquartered in Jakarta, Indonesia.          
           </p>
           <p
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
           data-aos-delay="200"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget. Suspendisse potenti. Curabitur euismod facilisis neque, eu malesuada diam finibus non. Nullam nec vehicula leo. Morbi porta ante eu feugiat mollis.
+          We are a <strong>global collective of business trainers</strong> with expertise in sales and leadership. ​
+          Our experience is shared in a practical way through result driven training programs.​
+           ​
+          As a global collective, Beyond Growth and ADD+ (The Netherlands), share a <strong>mutual belief and understanding</strong> ​on how to make businesses excel through impactful training.​ ​
+          
           </p>
+          <button class="modal-trigger"
+          data-modal-content="​Our partnership is based on a mutual sense of understanding on how training should 
+          be delivered to boost your business. ​All members of the collective share an intrinsic 
+          motivation to add value to people's business and personal success.​
+           ​
+          <strong>We hold extensive experience in leadership and sales</strong>, 
+          both entrepreneurial and managerial. ​We are not just trainers but 
+          entrepreneurs who learned how to train in an impactful way. ​
+           ​
+          The learnings of the past, especially our mistakes and failures, have been turned ​
+          into valuable learnings for sales and leadership - BG training intellect.
+          "
+          data-modal-header="Our Story"
+          >OUR STORY</button>
         </div>
 
         <div class="wrapper-image">
-          <svg class="svg-particles d-none d-lg-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 493.72 405.79"><g class="g-particles g-particles-group-1 animated expandParticles" data-appear-animation="expandParticles" data-appear-animation-delay="500" style="animation-delay: 500ms;"><line class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" x1="150.28" y1="108.35" x2="159.03" y2="102.1"></line><line class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" x1="325.51" y1="118.98" x2="334.26" y2="112.73"></line><line class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" x1="483.33" y1="94.52" x2="492.08" y2="88.27"></line><line class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" x1="321.14" y1="279.22" x2="329.89" y2="272.97"></line><line class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" x1="148.47" y1="279.22" x2="157.22" y2="272.97"></line><line class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" x1="11.14" y1="305.17" x2="19.89" y2="298.92"></line></g><g class="g-particles g-particles-group-2 animated expandParticles" data-appear-animation="expandParticles" data-appear-animation-delay="800" style="animation-delay: 800ms;"><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M51.78,105.64s-.37-12.75,5.25-3.5.38,7.13,0,7.13" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M229.34,103.24s-.37-12.75,5.25-3.5.38,7.12,0,7.12" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M401,103.24s-.37-12.75,5.25-3.5.38,7.12,0,7.12" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M401,274.1s-.37-12.75,5.25-3.5.38,7.13,0,7.13" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M227.33,276.14s-.37-12.75,5.25-3.5.38,7.13,0,7.13" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M55.49,276.14s-.37-12.75,5.25-3.5.38,7.13,0,7.13" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M97.76,41.59s-2.5,4.83,2.83,2.33.67,2.67.67,2.67" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M448.14,22.85s-2.5,4.83,2.83,2.33.67,2.67.67,2.67" transform="translate(-3.14 -1.85)"></path><path class="cls-1" fill="none" stroke="#969da0" stroke-miterlimit="10" d="M246,44.18s.1,5.85,4.41-.28,2.26,1.66,2.26,1.66" transform="translate(-3.14 -1.85)"></path></g><g class="g-particles g-particles-group-3 animated expandParticles" data-appear-animation="expandParticles" data-appear-animation-delay="1100" style="animation-delay: 1100ms;"><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="4.77" cy="151" r="1.14" transform="translate(-108.51 45.76) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="149.72" cy="30.16" r="1.14" transform="translate(19.39 112.85) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="304.7" cy="3.48" r="1.14" transform="translate(83.64 214.63) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="495.22" cy="155.04" r="1.14" transform="translate(32.28 393.74) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="315.2" cy="163.8" r="1.14" transform="translate(-26.64 269.01) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="153.42" cy="344.7" r="1.14" transform="translate(-201.94 207.59) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="249.61" cy="406" r="1.14" transform="translate(-217.11 293.57) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="313.32" cy="336.94" r="1.14" transform="translate(-149.62 318.39) rotate(-45)"></circle><circle class="cls-2" fill="#969da0" stroke="#969da0" cx="148.58" cy="172.2" r="1.14" transform="translate(-81.38 153.65) rotate(-45)"></circle></g><g class="g-particles g-particles-group-4 animated expandParticles" data-appear-animation="expandParticles" data-appear-animation-delay="1400" style="animation-delay: 1400ms;"><polyline class="cls-3" fill="none" stroke="#969da0" points="200.87 18.34 197.2 18.34 199.03 21"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="179.66 368.64 180.47 364.7 176.12 365.86"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="369.87 368.64 370.67 364.7 366.31 365.86"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="369.31 5.73 371.83 1.9 367.27 1.65"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="217.7 153.19 210.32 153.19 214.01 158.56"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="385.03 153.19 377.66 153.19 381.34 158.56"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="385.03 324.15 377.66 324.15 381.34 329.52"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="213.01 324.15 205.64 324.15 209.32 329.52"></polyline><polyline class="cls-3" fill="none" stroke="#969da0" points="52.35 324.15 44.98 324.15 48.66 329.52"></polyline></g><g class="g-particles g-particles-group-5 animated expandParticles" data-appear-animation="expandParticles" data-appear-animation-delay="1700" style="animation-delay: 1700ms;"><path class="cls-4" fill="none" stroke="#969da0" d="M264.48,188.12s-4,8.83,3.33,6.17,5.67-.5,5.67-.5-1.33,3.67-2.17,3.5" transform="translate(-3.14 -1.85)"></path><path class="cls-4" fill="none" stroke="#969da0" d="M444.52,179.07s-4,8.83,3.33,6.17,5.67-.5,5.67-.5-1.33,3.67-2.17,3.5" transform="translate(-3.14 -1.85)"></path><path class="cls-4" fill="none" stroke="#969da0" d="M94.23,196.91s-4,8.83,3.33,6.17,5.67-.5,5.67-.5-1.33,3.67-2.17,3.5" transform="translate(-3.14 -1.85)"></path><path class="cls-4" fill="none" stroke="#969da0" d="M92.81,369.86s-2.63,6.55,2.19,4.57,3.73-.37,3.73-.37-.88,2.72-1.43,2.6" transform="translate(-3.14 -1.85)"></path><path class="cls-4" fill="none" stroke="#969da0" d="M269.94,368.71c.06-.09,3.2,5.44,4.68,2,2-4.8,2.54-2.76,2.54-2.76s1.15,2.61.66,2.89" transform="translate(-3.14 -1.85)"></path></g><g class="g-particles g-particles-group-6 animated expandParticles" data-appear-animation="expandParticles" data-appear-animation-delay="2000" style="animation-delay: 2000ms;"><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="8.58 76.55 13.71 78.42 12.58 72.8"></polyline><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="8.58 228.65 13.71 230.53 12.58 224.9"></polyline><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="178.55 238.99 183.68 240.86 182.55 235.24"></polyline><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="349.47 240.53 354.59 242.4 353.47 236.78"></polyline><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="338.72 402.28 343.84 404.15 342.72 398.53"></polyline><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="147.72 399.46 152.84 401.34 151.72 395.71"></polyline><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="482.39 209.27 485.95 213.4 487.71 207.94"></polyline><polyline class="cls-5" fill="#969da0" stroke="#969da0" points="349.58 66.58 354.83 68.06 353.29 62.54"></polyline></g></svg>
+          <img 
+          src="assets/img/confetti.svg"
+          class="confetti"
+          data-aos="zoom-out"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-delay="100"
+          data-aos-duration="600"
+          >
           <img 
           data-aos="zoom-in"
           data-aos-anchor-placement="center-bottom"
-          data-aos-delay="100"
-          src="assets/img/group.png">
+          data-aos-delay="300"
+          data-aos-duration="600"
+          src="assets/img/group.jpg">
         </div>
       </div>
     </div>
@@ -200,7 +250,7 @@
           data-aos-duration="600"
           data-aos-delay="250"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ullam culpa sint quae recusandae?
+            Western knowledge with a local approach, understanding cultural differences.
           </span>
         </div>
         <div 
@@ -219,65 +269,66 @@
           </div>
           <div class="wrapper-step">
             <div class="img-step">
-              <img src="assets/img/step1.jpg">
+              <img src="assets/img/strategy-1.png">
             </div>
             <div class="caption-step">
               <h3 
                 data-aos-duration="600"
                 data-aos-delay="300"
-                data-aos="fade-down"
+                data-aos="fade-right"
               >
-                Why Choose Us
+                VISION
               </h3>
               <p
                 data-aos-duration="600"
                 data-aos-delay="400"
-                data-aos="fade-up"
+                data-aos="fade-right"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              To be a leading training collective impacting communication in the fields of sales and leadership within SEA region.
               </p>
             </div>
           </div>
           <div class="wrapper-step">
             <div class="img-step">
-              <img src="assets/img/step2.jpg">
+              <img src="assets/img/strategy-2.png">
             </div>
             <div class="caption-step">
               <h3
                 data-aos-duration="600"
                 data-aos-delay="400"
-                data-aos="fade-down"
+                data-aos="fade-right"
               >
-                Why Choose Us
+                GOAL
               </h3>
               <p
               data-aos-duration="600"
               data-aos-delay="500"
-              data-aos="fade-up"
+              data-aos="fade-right"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              The main goal of a BG training course is to improve the quality of communication. 
+              Our training modules are developed to change behaviour and increase confidence in (daily) decision making.              
               </p>
             </div>
           </div>
           
           <div class="wrapper-step">
             <div class="img-step">
-              <img src="assets/img/step3.jpg">
+              <img src="assets/img/strategy-3.png">
             </div>
             <div class="caption-step">
               <h3
               data-aos-duration="600"
               data-aos-delay="500"
-              data-aos="fade-down"
+              data-aos="fade-right"
               >
-                Why Choose Us
+                MISSION
               </h3>
               <p
                 data-aos-duration="600"
                 data-aos-delay="600"
-                data-aos="fade-up"
+                data-aos="fade-right"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+                To assist organizations and individuals in realizing their full commercial potential.
               </p>
             </div>
           </div>
@@ -294,8 +345,8 @@
             <span 
             data-aos="zoom-in"
             data-aos-duration="600"
-            class="exp-header">
-              1800+
+            class="exp-header counter counter-default">
+              <kbd class="counter-count">21</kbd>
             </span>
             <span 
               class="exp-desc"
@@ -304,7 +355,7 @@
               data-aos-delay="50"
               data-aos-anchor-placement="center-bottom"
             >
-              Happy Clients
+              Years of Experience
             </span>
           </div>
           <div class="wrapper-experience">
@@ -312,8 +363,8 @@
             data-aos="zoom-in"
             data-aos-duration="600"
             data-aos-delay="50"
-            class="exp-header">
-              16
+            class="exp-header counter counter-default">
+            <kbd class="counter-count">128</kbd>
             </span>
             <span 
               data-aos="fade-up"
@@ -321,7 +372,7 @@
               data-aos-delay="150"
               data-aos-anchor-placement="center-bottom"
             class="exp-desc">
-              Project
+              Cases
             </span>
           </div>
           <div class="wrapper-experience">
@@ -329,8 +380,8 @@
             data-aos="zoom-in"
             data-aos-duration="600"
             data-aos-delay="100"
-            class="exp-header">
-              1800+
+            class="exp-header counter counter-default">
+            <kbd class="counter-count">42</kbd>
             </span>
             <span 
             data-aos="fade-up"
@@ -338,7 +389,7 @@
             data-aos-delay="200"
             data-aos-anchor-placement="center-bottom"
             class="exp-desc">
-              Happy Clients
+              Clients
             </span>
           </div>
           <div class="wrapper-experience">
@@ -346,8 +397,8 @@
             data-aos="zoom-in"
             data-aos-duration="600"
             data-aos-delay="150"
-            class="exp-header">
-              1800+
+            class="exp-header counter counter-default">
+            <kbd class="counter-count">100</kbd>%
             </span>
             <span 
             data-aos="fade-up"
@@ -355,7 +406,7 @@
             data-aos-delay="250"
             data-aos-anchor-placement="center-bottom"
             class="exp-desc">
-              Happy Clients
+              Satisfied Clients
             </span>
           </div>
         </div>
@@ -365,16 +416,17 @@
           data-aos-duration="600"
           data-aos-delay="100"
           data-aos-anchor-placement="center-bottom"
+          href="https://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
           class="wrapper-video">
-            <video class="video blurEffect"> 
-                <source src="assets/img/video.mov"> 
-            </video>
+            <div class="wrapper-thumbnail-video">
+              <img src="assets/img/video-thumbnail.jpg" />
+            </div>
             <div class="content-video">
                 <div class="play">►</div>
             </div>
             <div class="content-video-caption">
               <h2>
-                  32 Seconds
+                  1 Minute
               </h2>
               <h1>
                 Watch the Video
@@ -387,56 +439,8 @@
           data-aos-delay="300"
           data-aos-anchor-placement="center-bottom"
           class="caption-video">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptate placeat quos repudiandae in assumenda quisquam consequuntur id nulla? Beatae id nobis consectetur, libero eaque illo maxime eius dolor maiores.
+          The coronavirus pandemic has disrupted corporate life forever. Emotional intelligence is the new gold standard and our daily leadership is being challenged. Empower tomorrow’s leaders.<br/>If not now… when?
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-service-new">
-    <div class="container">
-      <h2>
-        <img src="assets/img/stripe.webp">
-        Our Approach
-      </h2>
-      <div class="wrapper-service-new">
-        <div class="service-new">
-          <img src="assets/img/bulb.svg">
-          <h2>
-            Global business expertise tailored to client's needs
-          </h2>
-          <p>
-            All trainings crafted into the client's business case
-          </p>
-        </div>
-        <div class="service-new">
-          <img src="assets/img/globe.svg">
-          <h2>
-            International entrepreneurs who mastered training
-          </h2>
-          <p>
-            Not the other way around ​
-          </p>
-        </div>
-        <div class="service-new">
-          <img src="assets/img/people.svg">
-          <h2>
-            End-to-end training services 
-          </h2>
-          <p>
-            Your business case is our priority and training
-            is one of our tricks
-          </p>
-        </div>
-        <div class="service-new">
-          <img src="assets/img/shield.svg" style="width:65px">
-          <h2>
-            Proven training methodology
-          </h2>
-          <p>
-            100+ modules
-          </p>
         </div>
       </div>
     </div>
@@ -448,64 +452,61 @@
     data-aos-delay="0"
     data-aos="fade-down"
     class="wrapper-academy darkBlue">
-      <span>Lorem ipsum dolor sit amet</span>
-      <h3>Why Us?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+      <!-- <span>Lorem ipsum dolor sit amet</span> -->
+      <h3>Proven training methodology</h3>
+      <p>The BG Business Academy consists of over 100+ modules certified to improve <i>Leadership, Sales, Coaching and overall Business Communication</i>.</p>
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="100"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/roy-square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/proven-methodology.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="150"
     data-aos="fade-down"
     class="wrapper-academy darkBlue">
-      <span>Lorem ipsum dolor sit amet</span>
-      <h3>Great Solution</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+      <h3>Global expertise</h3>
+      <p>Our expertise is tailored to client’s needs​.All training courses are crafted into the client’s business case.</p>
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="300"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/great-solution.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="200"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/roy-square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/grid-4-1.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="250"
     data-aos="fade-down"
     class="wrapper-academy lightBlue">
-    <span>Lorem ipsum dolor sit amet</span>
-    <h3>Why Us?</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+    <h3>End-to-end training services </h3>
+    <p>Your business case is our priority and training is just one of our tricks to change behaviour. We offer multiple communication solutions.</p>
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="300"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/grid-4-2.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="350"
     data-aos="fade-down"
     class="wrapper-academy lightBlue">
-      <span>Lorem ipsum dolor sit amet</span>
-      <h3>Good Price</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+      <h3>International entrepreneurs</h3>
+      <p>We have mastered training through our entrepreneurial endeavours and not the other way around.</p>
     </div>
   </section>
 
-  <section class="section-business">
+  <section class="section-business" id="academy">
     <div class="wrapper-stripes"
     data-aos-duration="600"
     data-aos-delay="350"
@@ -516,28 +517,55 @@
     </div>
     <div class="container">
       <div class="wrapper-business _flex _v-center _space-around">
-        <h3>
+        <h3
+        data-aos-duration="600"
+        data-aos-delay="0"
+        data-aos="fade-down"
+        >
           TAILOR MADE
         </h3>
-        <img src="assets/img/academy.webp">
-        <h3>
+        <img src="assets/img/academy.webp"
+        data-aos-duration="600"
+        data-aos-delay="200"
+        data-aos="fade-down"
+        >
+        <h3
+        data-aos-duration="600"
+        data-aos-delay="350"
+        data-aos="fade-down"
+        >
           100+ MODULES
         </h3>
       </div>
-      <h3>
+      <h3
+      data-aos-duration="600"
+      data-aos-delay="350"
+      data-aos="fade-down"
+      >
         BEYOND GROWTH
       </h3>
-      <h4>
+      <h4
+      data-aos-duration="600"
+      data-aos-delay="400"
+      data-aos="fade-down"
+      >
         BUSINESS <span>
           <img src="assets/img/stripe.webp"/>
-          ACADEMY
         </span>
+        ACADEMY
       </h4>
     </div>
     <div class="container">
       <div class="wrapper-content-business flex _v-center _space-between">
-        <div class="business-gradient">
-          <div class="business" style="background-image:url(./assets/img/brain.webp)">
+        <div class="business-gradient"
+          data-aos-duration="600"
+          data-aos-delay="0"
+          data-aos="fade-up"
+        >
+          <div class="business" style="background-image:url(./assets/img/brain.webp)"
+          data-modal-content="Leadership Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque."
+          data-modal-header="Leadership"
+          >
             <img src="assets/img/stripes.webp" class="top">
             <img src="assets/img/stripes.webp" class="bot">
             <img src="assets/img/bg-small-white.webp" class="mini-logo">
@@ -552,8 +580,15 @@
             </h3>
           </div>
         </div>
-        <div class="business-gradient">
-          <div class="business" style="background-image:url(./assets/img/people-business.webp)">
+        <div class="business-gradient"
+        data-aos-duration="600"
+          data-aos-delay="200"
+          data-aos="fade-up"
+        >
+          <div class="business" style="background-image:url(./assets/img/people-business.webp)"
+          data-modal-content="POWER Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque."
+          data-modal-header="POWER"
+          >
             <img src="assets/img/stripes.webp" class="top">
             <img src="assets/img/stripes.webp" class="bot">
             <img src="assets/img/bg-small-white.webp" class="mini-logo">
@@ -568,8 +603,15 @@
             </h3>
           </div>
         </div>
-        <div class="business-gradient">
-          <div class="business" style="background-image:url(./assets/img/point-business.webp)">
+        <div class="business-gradient"
+        data-aos-duration="600"
+          data-aos-delay="400"
+          data-aos="fade-up"
+        >
+          <div class="business" style="background-image:url(./assets/img/point-business.webp)"
+          data-modal-content="SALES Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque."
+          data-modal-header="SALES"
+          >
             <img src="assets/img/stripes.webp" class="top">
             <img src="assets/img/stripes.webp" class="bot">
             <img src="assets/img/bg-small-white.webp" class="mini-logo">
@@ -584,8 +626,15 @@
             </h3>
           </div>
         </div>
-        <div class="business-gradient">
-          <div class="business" style="background-image:url(./assets/img/salute-business.webp)">
+        <div class="business-gradient"
+        data-aos-duration="600"
+          data-aos-delay="600"
+          data-aos="fade-up"
+        >
+          <div class="business" style="background-image:url(./assets/img/salute-business.webp)"
+          data-modal-content="SALES Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque."
+          data-modal-header="SALES"
+          >
             <img src="assets/img/stripes.webp" class="top">
             <img src="assets/img/stripes.webp" class="bot">
             <img src="assets/img/bg-small-white.webp" class="mini-logo">
@@ -600,8 +649,15 @@
             </h3>
           </div>
         </div>
-        <div class="business-gradient">
-          <div class="business" style="background-image:url(./assets/img/puzzle-business.webp)">
+        <div class="business-gradient"
+        data-aos-duration="600"
+          data-aos-delay="800"
+          data-aos="fade-up"
+        >
+          <div class="business" style="background-image:url(./assets/img/puzzle-business.webp)"
+          data-modal-content="SALES Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque."
+          data-modal-header="SALES"
+          >
             <img src="assets/img/stripes.webp" class="top">
             <img src="assets/img/stripes.webp" class="bot">
             <img src="assets/img/bg-small-white.webp" class="mini-logo">
@@ -616,8 +672,15 @@
             </h3>
           </div>
         </div>
-        <div class="business-gradient">
-          <div class="business" style="background-image:url(./assets/img/presentation-business.webp)">
+        <div class="business-gradient"
+        data-aos-duration="600"
+          data-aos-delay="1000"
+          data-aos="fade-up"
+        >
+          <div class="business" style="background-image:url(./assets/img/presentation-business.webp)"
+          data-modal-content="SALES Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque."
+          data-modal-header="SALES"
+          >
             <img src="assets/img/stripes.webp" class="top">
             <img src="assets/img/stripes.webp" class="bot">
             <img src="assets/img/bg-small-white.webp" class="mini-logo">
@@ -643,20 +706,20 @@
           International Certified
         </h3>
         <div class="wrapper-certification _flex">
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/certification-astch.webp">
-            </div>
+          <div>
+            <img src="assets/img/astch-border.png">
           </div>
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/certification-astch.webp">
-            </div>
+          <div>
+            <img src="assets/img/BB-border.png">
           </div>
-          <div class="border-gradient">
-            <div>
-              <img src="assets/img/certification-astch.webp">
-            </div>
+          <div>
+            <img src="assets/img/bg-border.png">
+          </div>
+          <div>
+            <img src="assets/img/disc-border.png">
+          </div>
+          <div>
+            <img src="assets/img/eq-border.png">
           </div>
         </div>
         <h3>
@@ -666,138 +729,204 @@
     </div>
   </section>
 
-  <section class="section-service-new">
+  <section class="section-service-new" id="services">
     <div class="container">
       <h2>
-        <img src="assets/img/stripe.webp">
-        Our Service
+        Our Services
       </h2>
       <div class="wrapper-service-new">
-        <div class="service-new">
-          <img src="assets/img/bulb.svg">
-          <h2>
-            Global business expertise tailored to client's needs
-          </h2>
-          <p>
-            All trainings crafted into the client's business case
-          </p>
+        <div class="service-new"
+        data-aos-duration="600"
+          data-aos-delay="0"
+          data-aos="fade-right"
+        >
+          <h3>
+            <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
+            PRE-TRAINING ASSESSMENT (PTA)
+          </h3>
         </div>
-        <div class="service-new">
-          <img src="assets/img/globe.svg">
-          <h2>
-            International entrepreneurs who mastered training
-          </h2>
-          <p>
-            Not the other way around ​
-          </p>
+        <div class="service-new"
+        data-aos-duration="600"
+          data-aos-delay="100"
+          data-aos="fade-right"
+        >
+          <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
+            IN HOUSE TRAINING / WORKSHOP
+          </h3>
         </div>
-        <div class="service-new">
-          <img src="assets/img/people.svg">
-          <h2>
-            End-to-end training services 
-          </h2>
-          <p>
-            Your business case is our priority and training
-            is one of our tricks
-          </p>
+        <div class="service-new"
+        data-aos-duration="600"
+          data-aos-delay="200"
+          data-aos="fade-right"
+        >
+          <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
+            ONLINE TRAINING
+          </h3>
         </div>
-        <div class="service-new">
-          <img src="assets/img/shield.svg" style="width:65px">
-          <h2>
-            Proven training methodology
-          </h2>
-          <p>
-            100+ modules
-          </p>
+        <div class="service-new"
+        data-aos-duration="600"
+          data-aos-delay="300"
+          data-aos="fade-right"
+        >
+          <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
+            POST-TRAINING EVALUATION (PTE)
+          </h3>
+        </div>
+        <div class="service-new"
+        data-aos-duration="600"
+          data-aos-delay="400"
+          data-aos="fade-right"
+        >
+          <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
+            ON-THE-JOB COACHING
+          </h3>
+        </div>
+        <div class="service-new"
+        data-aos-duration="600"
+          data-aos-delay="500"
+          data-aos="fade-right"
+        >
+          <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
+            PERSONAL COACHING
+          </h3>
+        </div>
+        <div class="service-new"
+        data-aos-duration="600"
+          data-aos-delay="600"
+          data-aos="fade-right"
+        >
+          <h3>
+             <span>
+              <img src="assets/img/checkmark-circle.svg" />
+            </span>
+            BUSINESS CASE CONSULTANCY
+          </h3>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section-team">
-    <div class="background-team" style="background-image: url(assets/img/bg-team.jpg)">
+    <div class="background-team" style="background-image: url(assets/img/celebration.jpg)">
     </div>
     <div class="container">
       <div class="wrapper-team">
         <div class="wrapper-header-team">
           <div class="left">
-            <span>OUR HIGHLIGHT</span>
+            <span>CORE PEOPLE</span>
             <h3>Team</h3>
           </div>
         </div>
 
         <div class="wrapper-grid-team">
           <div class="item-team">
-            <img 
+            <div class="_relative"
             data-aos="zoom-out"
             data-aos-anchor-placement="center-bottom"
-            data-aos-delay="0"
-            src="assets/img/team.jpg">
+            data-aos-delay="0">
+              <img 
+              src="assets/img/waldo-linkedin.png">
+
+              <a href="https://www.linkedin.com/in/waldo-den-dekker-a522643/" target="_blank">
+                <img src="assets/img/linkedin.svg">
+              </a>
+            </div>
             <h3 class="name"
             data-aos="fade-in"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="100"
-            >Chris Doe</h3>
+            >Waldo den Dekker</h3>
             <span class="title"
             data-aos="fade-out"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="200"
-            >Designer</span>
-            <a href="#"></a>
+            >President Director</span>
           </div>
           <div class="item-team">
-            <img 
+            <div class="_relative"
             data-aos="zoom-out"
             data-aos-anchor-placement="center-bottom"
-            data-aos-delay="50"
-            src="assets/img/team.jpg">
+            data-aos-delay="100">
+              <img 
+              src="assets/img/roy-linkedin.png">
+
+              <a href="https://www.linkedin.com/in/roygeurts/" target="_blank">
+                <img src="assets/img/linkedin.svg">
+              </a>
+            </div>
             <h3 class="name"
             data-aos="fade-in"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="150"
-            >Chris Doe</h3>
+            >Roy Geurts</h3>
             <span class="title"
             data-aos="fade-out"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="250"
-            >Designer</span>
-            <a href="#"></a>
+            >Managing Director</span>
           </div>
           <div class="item-team">
-            <img 
+            <div class="_relative"
             data-aos="zoom-out"
             data-aos-anchor-placement="center-bottom"
-            data-aos-delay="100"
-            src="assets/img/team.jpg">
+            data-aos-delay="200">
+              <img 
+              src="assets/img/jesse-linkedin.png">
+
+              <a href="https://www.linkedin.com/in/jesseboon/" target="_blank">
+                <img src="assets/img/linkedin.svg">
+              </a>
+            </div>
             <h3 class="name"
             data-aos="fade-in"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="200"
-            >Chris Doe</h3>
+            >Jesse Boon</h3>
             <span class="title"
             data-aos="fade-out"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="250"
-            >Designer</span>
-            <a href="#"></a>
+            >Co-Founder</span>
           </div>
           <div class="item-team">
-            <img 
+            <div class="_relative"
             data-aos="zoom-out"
             data-aos-anchor-placement="center-bottom"
-            data-aos-delay="150"
-            src="assets/img/team.jpg">
+            data-aos-delay="300">
+              <img 
+              src="assets/img/tyna-linkedin.jpg">
+
+              <a href="https://www.linkedin.com/in/tyna-sutanto-1405a5174/" target="_blank">
+                <img src="assets/img/linkedin.svg">
+              </a>
+            </div>
             <h3 class="name"
             data-aos="fade-in"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="250"
-            >Chris Doe</h3>
+            >Tyna Sutanto</h3>
             <span class="title"
             data-aos="fade-out"
             data-aos-anchor-placement="center-bottom"
             data-aos-delay="300"
-            >Designer</span>
-            <a href="#"></a>
+            >PR Manager</span>
           </div>
         </div>
       </div>
@@ -823,16 +952,16 @@
                 <span>
                   1.
                 </span>
-                STRATEGY
+                PROPOSAL
               </h1>
             </div>
             <div class="caption-step">
               <p
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="0"
               data-aos-duration="600"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              After the initial meeting, we develop a tailored proposal based on the business case, client requests and BG advice.
               </p>
             </div>
           </div>
@@ -842,7 +971,7 @@
                 <span>
                   2.
                 </span>
-                PLANNING
+                FOLLOW-UP
               </h1>
             </div>
             <div class="caption-step">
@@ -851,7 +980,7 @@
               data-aos-delay="50"
               data-aos-duration="600"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              The proposal is being discussed and specific training modules are showcased that target the fields for improvement.
               </p>
             </div>
           </div>
@@ -861,16 +990,16 @@
                 <span>
                   3.
                 </span>
-                BUILD
+                EXECUTION
               </h1>
             </div>
             <div class="caption-step">
               <p
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="100"
               data-aos-duration="600"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              The training plan is executed by; pre-training assessments, multiple training days and post-training evaluations.
               </p>
             </div>
           </div>
@@ -880,51 +1009,41 @@
     </div>
   </section>
 
-  <section class="section-testimonial">
+  <section class="section-values">
     <div class="container">
-      <div class="wrapper-testimonial">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="item-testimonial">
-                <p class="testimonial">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus aliquid consectetur, perspiciatis voluptates vero non impedit
-                </p>
-                <div class="testimonial-image">
-                  <img src="assets/img/team.jpg">
-                </div>
-                <h3>John Doe</h3>
-                <span>Designer</span>
-              </div>
-              <div class="item-testimonial">
-                <p class="testimonial">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus aliquid consectetur, perspiciatis voluptates vero non impedit
-                </p>
-                <div class="testimonial-image">
-                  <img src="assets/img/team.jpg">
-                </div>
-                <h3>John Doe</h3>
-                <span>Designer</span>
-              </div>
-              <div class="item-testimonial">
-                <p class="testimonial">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus aliquid consectetur, perspiciatis voluptates vero non impedit
-                </p>
-                <div class="testimonial-image">
-                  <img src="assets/img/team.jpg">
-                </div>
-                <h3>John Doe</h3>
-                <span>Designer</span>
-              </div>
-            </div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
+      <div class="wrapper-values flex _space-between">
+        <div class="hover-1">
+          <div class="inner-hover-1 values-item">
+            <img src="assets/img/lnr-star.svg">
+            <h2>
+              Excellence
+            </h2>
+            <p>
+              To always strive for excellence.
+            </p>
           </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-          <!-- Add Arrows -->
-          <!-- <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div> -->
+        </div>
+        <div class="hover-1">
+          <div class="inner-hover-1 values-item">
+            <img src="assets/img/bulb.svg">
+            <h2>
+              Open-minded
+            </h2>
+            <p>
+              To sincerely seek and consider each others opinion and values that can contribute to a mutual understanding.
+            </p>
+          </div>
+        </div>
+        <div class="hover-1">
+          <div class="inner-hover-1 values-item">
+            <img src="assets/img/rocket.svg">
+            <h2>
+              Growth
+            </h2>
+            <p>
+              To set ambitious goals and achieve them.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -932,125 +1051,344 @@
 
   <section class="section-feed">
     <div class="container">
-      <div class="wrapper-feed">
-        <h2>Our Blog</h2>
-        <div class="wrapper-collection-feed">
-          <div class="feed">
-            <a href="#">
-              <img src="assets/img/feed.png">
-              <h3>
-                Lorem Ipsum
-              </h3>
-              <span class="date">
-                Jan-17, 2018
-              </span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maxime, debitis velit voluptates commodi labore sequi rem dicta
-              </p>
-            </a>
+      <div class="category-feed">
+        <span class="category-btn active" data-choosen="*">
+          SHOW ALL
+        </span>
+        <span class="category-btn" data-choosen=".post">
+          POSTS
+        </span>
+        <span class="category-btn" data-choosen=".picture">
+          PICTURES
+        </span>
+        <span class="category-btn" data-choosen=".video">
+          VIDEOS
+        </span>
+      </div>
+
+      <div class="feed-masonry">
+        <div class="gutter-sizer"></div>
+        <div class="grid-item picture"
+        data-featherlight="assets/img/post1.JPG"
+        >
+          <img src="./assets/img/post1.JPG">
+        </div>
+        <div class="grid-item picture"
+        data-featherlight="assets/img/post2.jpg"
+        >
+          <img src="./assets/img/post2.jpg">
+        </div>
+        <div class="grid-item picture"
+        href="http://www.youtube.com/embed/EIS5gg1dhQU?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
+        >
+          <img src="./assets/img/post3.jpg">
+        </div>
+        <div class="grid-item post">
+          <a href="https://indonesiaexpat.id/business-property/business-profile/roy-geurts-jesse-boon-from-beyond-growth" target="_blank">
+            <img src="./assets/img/post4.jpg">
+          </a>
+        </div>
+        <div class="grid-item post">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:6653133977202851841/" target="_blank">
+            <img src="./assets/img/post5.jpg">
+          </a>
+        </div>
+        <div class="grid-item post">
+          <a href="https://www.linkedin.com/pulse/how-create-strong-connections-anybody-8-practical-principles-boon/" target="_blank"></a>
+            <img src="./assets/img/post6.JPG" />
+          </a>
+        </div>
+        <div class="grid-item picture"
+          data-featherlight="assets/img/post7.JPG"
+        >
+          <img src="./assets/img/post7.JPG">
+        </div>
+        <div class="grid-item picture"
+          data-featherlight="assets/img/post8.JPG"
+        >
+          <img src="./assets/img/post8.JPG">
+        </div>
+        <div class="grid-item video"
+          href="http://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
+        >
+          <img src="./assets/img/post9.JPG">
+        </div>
+        <div class="grid-item video"
+          href="http://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
+        >
+          <img src="./assets/img/post10.JPG">
+        </div>
+      </div>
+      <button id="load-masonry">LOAD MORE</button>
+    </div>
+  </section>
+
+  <section class="section-testimonial">
+    <div class="container">
+      <h3>WHAT THEY SAY</h3>
+      <h2>Testimonials</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="_flex wrapper-testimonial">
+              <div class="img-rounded">
+                <img src="assets/img/team.jpg">
+              </div>
+              <div class="_flex-col">
+                <p>"The Emotional Intelligence training improved my team's leadership skills and the initiative to take more responsibility."</p>
+                <h2>- Doddy Suhartono​</h2>
+                <h3>F&B Director - Cinema XXI</h3>
+              </div>
+            </div>
           </div>
-          <div class="feed">
-            <a href="#">
-              <img src="assets/img/portrait.jpg">
-              <h3>
-                Lorem Ipsum
-              </h3>
-              <span class="date">
-                Jan-17, 2018
-              </span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maxime, debitis velit voluptates commodi labore sequi rem dicta
-              </p>
-            </a>
+          <div class="swiper-slide">
+            <div class="_flex wrapper-testimonial">
+              <div class="img-rounded">
+                <img src="assets/img/team.jpg">
+              </div>
+              <div class="_flex-col">
+                <p>"The BG training courses have changed the mentality of my salesforce. Anyone can benefit from their unique training principles."</p>
+                <h2>- James Mac Arthur</h2>
+                <h3>Sales Director - Sony Corporation, Int.</h3>
+              </div>
+            </div>
           </div>
-          <div class="feed">
-            <a href="#">
-              <img src="assets/img/feed.png">
-              <h3>
-                Lorem Ipsum
-              </h3>
-              <span class="date">
-                Jan-17, 2018
-              </span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maxime, debitis velit voluptates commodi labore sequi rem dicta
-              </p>
-            </a>
+          <div class="swiper-slide">
+            <div class="_flex wrapper-testimonial">
+              <div class="img-rounded">
+                <img src="assets/img/team.jpg">
+              </div>
+              <div class="_flex-col">
+                <p>"BG provided us with the tools and skills to communicate in an Emotional Intelligence way. This has helped us to grow our business and outperform set KPI's.”"</p>
+                <h2>- Tito Tambayong</h2>
+                <h3>CEO - Vospay Finance</h3>
+              </div>
+            </div>
           </div>
         </div>
-        <button>LOAD MORE</button>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
 
-  <section class="section-map">
-    <div id="map"></div>
+  <section class="section-location">
+    <div class="container">
+      <h3>GET IN TOUCH WITH US</h3>
+      <h2>Our Locations</h2>
+      <div class="wrapper-location">
+        <div class="location">
+          <h3 class="country">
+            INDONESIA
+          </h3>
+          <h2 class="city">
+            Jakarta
+          </h2>
+          <p class="address">
+            Beyond Growth | Training Consultancy<br>
+            CoHive 101 - 5th Floor​<br>
+            Jl. DR. Ide Anak Agung Gde Agung No.1<br>
+            South Jakarta, 12950<br>
+            (021) 27899952
+          </p>
+          <a href="#">
+            GET DIRECTIONS
+          </a>
+          <img src="assets/img/chevron-right.svg">
+        </div>
+        <div class="location">
+          <h3 class="country">
+            THE NETHERLANDS
+          </h3>
+          <h2 class="city">
+            Rotterdam
+          </h2>
+          <p class="address">
+            Beyond Growth | Training Consultancy<br>
+            CoHive 101 - 5th Floor​<br>
+            Jl. DR. Ide Anak Agung Gde Agung No.1<br>
+            South Jakarta, 12950<br>
+            (021) 27899952
+          </p>
+          <a href="#">
+            GET DIRECTIONS
+          </a>
+          <img src="assets/img/chevron-right.svg">
+        </div>
+        <div class="location">
+          <h3 class="country">
+            IRELAND
+          </h3>
+          <h2 class="city">
+            Dublin
+          </h2>
+          <p class="address">
+            Beyond Growth | Training Consultancy<br>
+            CoHive 101 - 5th Floor​<br>
+            Jl. DR. Ide Anak Agung Gde Agung No.1<br>
+            South Jakarta, 12950<br>
+            (021) 27899952
+          </p>
+          <a href="#">
+            GET DIRECTIONS
+          </a>
+          <img src="assets/img/chevron-right.svg">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="section-contact">
+  <section class="section-contact" id="contact">
     <div class="container">
       <div class="wrapper-contact">
-        <span class="blue">
-          LOREM IPSUM DOLOR SIT AMET
-        </span>
-        <h2>
-          Get in Touch With Us
-        </h2>
-        <p>
-          If you have any further questions or queries please do not hesitate to get in touch.
-        </p>
         <div class="wrapper-field">
           <div class="left-contact">
-            <div class="wrapper-icon">
-              <img src="assets/img/apartment.svg" class="address">
-              <div class="contact-caption">
-                <h3>Address</h3>
-                <p>Beyond Growth | Training Consultancy
-                  CoHive 101 - 5th Floor​<br>
-                  Jl. DR. Ide Anak Agung Gde Agung No.1
-                  South Jakarta, 12950</p>
-              </div>
-            </div>
-            <div class="wrapper-icon">
-              <img src="assets/img/mail.svg">
-              <div class="contact-caption">
-                <h3>Email Address</h3>
-                <p>tyna@beyondgrowth.co.id</p>
-              </div>
-            </div>
-            <div class="wrapper-icon">
-              <img src="assets/img/phone.svg">
-              <div class="contact-caption">
-                <h3>Phone</h3>
-                <p>(021) 27899952</p>
-              </div>
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2843137622613!2d106.82308271476907!3d-6.226194895492983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f59eb0cc432d%3A0x72a012483d25e7b4!2sBeyond%20Growth%20%7C%20Training%20Consultancy!5e0!3m2!1sid!2sid!4v1615109474614!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
 
           <div class="right-contact">
+            <h3>QUICK CONTACT</h3>
+            <h2>Let's grow together!</h2>
             <input name="name" placeholder="Name">
             <input name="email"  placeholder="Email">
-            <input name="subject" placeholder="Subject">
             <textarea placeholder="Message"></textarea>
+            <button class="invert">SEND MESSAGE</button>
           </div>
         </div>
-        <button class="invert">SEND MESSAGE</button>
       </div>
     </div>
   </section>
 
+  <!-- <section class="section-pre-footer">
+    <div class="container">
+      <div class="wrapper-pre-footer">
+        <div class="left">
+          <h3>
+            Creative Process
+          </h3>
+          <ul>
+            <li>Lorem Ipsum Dolor</li>
+            <li>Lorem Ipsum Dolor</li>
+            <li>Lorem Ipsum Dolor </li>
+          </ul>
+        </div>
+        <div class="mid">
+          <h3>
+            We Delivery
+          </h3>
+          <ul>
+            <li>Lorem Ipsum Dolor</li>
+            <li>Lorem Ipsum Dolor</li>
+            <li>Lorem Ipsum Dolor</li>
+          </ul>
+        </div>
+        <div class="right">
+          <h3>
+            Why Us
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptas omnis voluptates tempora cupiditate harum sunt repudiandae hic ipsum consequatur? Mollitia, vel! Ab atque odio qui tempora dignissimos itaque non.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
   <section class="section-footer">
-    <div class="wrapper-footer">
-      <span>Copyright BeyondGrowth 2021.</span>
-      <img src="assets/img/bg-singkat.png">
+    <div class="container">
+      <div class="wrapper-footer">
+        <span>All Rights Reserved © 2016 - 2026</span>
+        <img src="assets/img/footer-logo-white.png">
+        <span>PT Solusi Bisnis Internasional</span>
+      </div>
     </div>
   </section>
-  
+
+  <!-- Modal -->
+  <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="postModal">
+            lmao
+          </h5>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    let itemsGrid = [
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/team.jpg',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+      {
+        img: './assets/img/salute-business.webp',
+        theClass: 'picture'
+      },
+    ]
+    let typeCollection = [
+      'potential.',
+      'goals.',
+      'dreams.'
+    ]
+  </script>
   <script src="assets/js/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="assets/js/masonry.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAegoqArWnsC7aYnTQ9gGsTaJ6UQoAxFsE&callback=initMap&libraries=&v=weekly" async ></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https:////cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="assets/js/count.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
