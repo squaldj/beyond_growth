@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="dist/css/style.css" rel="stylesheet">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="dist/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
@@ -22,29 +22,31 @@
       </div>
       <ul>
         <li>
-          <a href="#">
+          <a href="#home">
             Home
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#story">
             About Us
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#academy">
             Academy
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#services">
             Services
           </a>
         </li>
         <li>
-          <button>
-            CONTACT US
-          </button>
+          <a href="#contact">
+            <button>
+              CONTACT US
+            </button>
+          </a>
         </li>
       </ul>
     </div>
@@ -54,25 +56,27 @@
       <div class="bottom-bun"></div>
     </label>
     <div class="navbar-mobile">
-      <a href="#">
+      <a href="#home">
         HOME
       </a>
-      <a href="#">
+      <a href="#story">
         ABOUT US
       </a>
-      <a href="#">
-        TRAINING
+      <a href="#academy">
+        Academy
       </a>
-      <a href="#">
-        CONTACT US
+      <a href="#services">
+        Services
       </a>
-      <button>
-        CONTACT US
-      </button>
+      <a href="#contact">
+        <button>
+          CONTACT US
+        </button>
+      </a>
     </div>
   </nav>
 
-  <div class="bg-home">
+  <div class="bg-home" id="home">
     <div class="wrapper-home">
       <img src="assets/img/waldo.png" class="slide-show">
       <img src="assets/img/roy-flip.webp" class="slide-show _d-none">
@@ -159,7 +163,7 @@
     </div>
   </section>
 
-  <section class="section-story">
+  <section class="section-story" id="story">
     <div class="container">
       <div class="wrapper-story">
         <div class="wrapper-caption">
@@ -181,17 +185,32 @@
           data-aos-anchor-placement="center-bottom"
           data-aos-delay="150"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.
+          Beyond Growth (BG) is a training and consultancy firm specialized in
+          soft skills development, headquartered in Jakarta, Indonesia.          
           </p>
           <p
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
           data-aos-delay="200"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget. Suspendisse potenti. Curabitur euismod facilisis neque, eu malesuada diam finibus non. Nullam nec vehicula leo. Morbi porta ante eu feugiat mollis.
+          We are a <strong>global collective of business trainers</strong> with expertise in sales and leadership. ​
+          Our experience is shared in a practical way through result driven training programs.​
+           ​
+          As a global collective, Beyond Growth and ADD+ (The Netherlands), share a <strong>mutual belief and understanding</strong> ​on how to make businesses excel through impactful training.​ ​
+          
           </p>
           <button class="modal-trigger"
-          data-modal-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget. Suspendisse potenti. Curabitur euismod facilisis neque, eu malesuada diam finibus non. Nullam nec vehicula leo. Morbi porta ante eu feugiat mollis."
+          data-modal-content="​Our partnership is based on a mutual sense of understanding on how training should 
+          be delivered to boost your business. ​All members of the collective share an intrinsic 
+          motivation to add value to people's business and personal success.​
+           ​
+          <strong>We hold extensive experience in leadership and sales</strong>, 
+          both entrepreneurial and managerial. ​We are not just trainers but 
+          entrepreneurs who learned how to train in an impactful way. ​
+           ​
+          The learnings of the past, especially our mistakes and failures, have been turned ​
+          into valuable learnings for sales and leadership - BG training intellect.
+          "
           data-modal-header="Our Story"
           >OUR STORY</button>
         </div>
@@ -231,7 +250,7 @@
           data-aos-duration="600"
           data-aos-delay="250"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ullam culpa sint quae recusandae?
+            Western knowledge with a local approach, understanding cultural differences.
           </span>
         </div>
         <div 
@@ -250,7 +269,7 @@
           </div>
           <div class="wrapper-step">
             <div class="img-step">
-              <img src="assets/img/step1.jpg">
+              <img src="assets/img/strategy-1.png">
             </div>
             <div class="caption-step">
               <h3 
@@ -258,20 +277,20 @@
                 data-aos-delay="300"
                 data-aos="fade-right"
               >
-                Why Choose Us
+                VISION
               </h3>
               <p
                 data-aos-duration="600"
                 data-aos-delay="400"
                 data-aos="fade-right"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              To be a leading training collective impacting communication in the fields of sales and leadership within SEA region.
               </p>
             </div>
           </div>
           <div class="wrapper-step">
             <div class="img-step">
-              <img src="assets/img/step2.jpg">
+              <img src="assets/img/strategy-2.png">
             </div>
             <div class="caption-step">
               <h3
@@ -279,21 +298,22 @@
                 data-aos-delay="400"
                 data-aos="fade-right"
               >
-                Why Choose Us
+                GOAL
               </h3>
               <p
               data-aos-duration="600"
               data-aos-delay="500"
               data-aos="fade-right"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              The main goal of a BG training course is to improve the quality of communication. 
+              Our training modules are developed to change behaviour and increase confidence in (daily) decision making.              
               </p>
             </div>
           </div>
           
           <div class="wrapper-step">
             <div class="img-step">
-              <img src="assets/img/step3.jpg">
+              <img src="assets/img/strategy-3.png">
             </div>
             <div class="caption-step">
               <h3
@@ -301,14 +321,14 @@
               data-aos-delay="500"
               data-aos="fade-right"
               >
-                Why Choose Us
+                MISSION
               </h3>
               <p
                 data-aos-duration="600"
                 data-aos-delay="600"
                 data-aos="fade-right"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+                To assist organizations and individuals in realizing their full commercial potential.
               </p>
             </div>
           </div>
@@ -406,7 +426,7 @@
             </div>
             <div class="content-video-caption">
               <h2>
-                  32 Seconds
+                  1 Minute
               </h2>
               <h1>
                 Watch the Video
@@ -419,7 +439,7 @@
           data-aos-delay="300"
           data-aos-anchor-placement="center-bottom"
           class="caption-video">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          The coronavirus pandemic has disrupted corporate life forever. Emotional intelligence is the new gold standard and our daily leadership is being challenged. Empower tomorrow’s leaders.<br/>If not now… when?
           </div>
         </div>
       </div>
@@ -432,64 +452,61 @@
     data-aos-delay="0"
     data-aos="fade-down"
     class="wrapper-academy darkBlue">
-      <span>Lorem ipsum dolor sit amet</span>
-      <h3>Why Us?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+      <!-- <span>Lorem ipsum dolor sit amet</span> -->
+      <h3>Proven training methodology</h3>
+      <p>The BG Business Academy consists of over 100+ modules certified to improve <i>Leadership, Sales, Coaching and overall Business Communication</i>.</p>
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="100"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/roy-square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/proven-methodology.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="150"
     data-aos="fade-down"
     class="wrapper-academy darkBlue">
-      <span>Lorem ipsum dolor sit amet</span>
-      <h3>Great Solution</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+      <h3>Global expertise</h3>
+      <p>Our expertise is tailored to client’s needs​.All training courses are crafted into the client’s business case.</p>
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="300"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/great-solution.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="200"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/roy-square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/grid-4-1.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="250"
     data-aos="fade-down"
     class="wrapper-academy lightBlue">
-    <span>Lorem ipsum dolor sit amet</span>
-    <h3>Why Us?</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+    <h3>End-to-end training services </h3>
+    <p>Your business case is our priority and training is just one of our tricks to change behaviour. We offer multiple communication solutions.</p>
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="300"
     data-aos="fade-down"
-    class="wrapper-academy" style="background-image:url(assets/img/square.webp)">
+    class="wrapper-academy" style="background-image:url(assets/img/grid-4-2.png)">
     </div>
     <div 
     data-aos-duration="600"
     data-aos-delay="350"
     data-aos="fade-down"
     class="wrapper-academy lightBlue">
-      <span>Lorem ipsum dolor sit amet</span>
-      <h3>Good Price</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet.</p>
+      <h3>International entrepreneurs</h3>
+      <p>We have mastered training through our entrepreneurial endeavours and not the other way around.</p>
     </div>
   </section>
 
-  <section class="section-business">
+  <section class="section-business" id="academy">
     <div class="wrapper-stripes"
     data-aos-duration="600"
     data-aos-delay="350"
@@ -712,7 +729,7 @@
     </div>
   </section>
 
-  <section class="section-service-new">
+  <section class="section-service-new" id="services">
     <div class="container">
       <h2>
         Our Services
@@ -935,7 +952,7 @@
                 <span>
                   1.
                 </span>
-                STRATEGY
+                PROPOSAL
               </h1>
             </div>
             <div class="caption-step">
@@ -944,7 +961,7 @@
               data-aos-delay="0"
               data-aos-duration="600"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              After the initial meeting, we develop a tailored proposal based on the business case, client requests and BG advice.
               </p>
             </div>
           </div>
@@ -954,7 +971,7 @@
                 <span>
                   2.
                 </span>
-                PLANNING
+                FOLLOW-UP
               </h1>
             </div>
             <div class="caption-step">
@@ -963,7 +980,7 @@
               data-aos-delay="50"
               data-aos-duration="600"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              The proposal is being discussed and specific training modules are showcased that target the fields for improvement.
               </p>
             </div>
           </div>
@@ -982,7 +999,7 @@
               data-aos-delay="100"
               data-aos-duration="600"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur est aperiam consectetur doloribus culpa libero hic cumque assumenda? Hic ea libero provident perferendis consequatur minima, ab quod nisi sint doloremque.
+              The training plan is executed by; pre-training assessments, multiple training days and post-training evaluations.
               </p>
             </div>
           </div>
@@ -1052,39 +1069,54 @@
       <div class="feed-masonry">
         <div class="gutter-sizer"></div>
         <div class="grid-item picture"
-        data-featherlight="assets/img/step1.jpg"
+        data-featherlight="assets/img/post1.JPG"
         >
-          <img src="./assets/img/step1.jpg">
+          <img src="./assets/img/post1.JPG">
         </div>
         <div class="grid-item picture"
-        data-featherlight="assets/img/team.jpg"
+        data-featherlight="assets/img/post2.jpg"
         >
-          <img src="./assets/img/roy-flip.webp">
+          <img src="./assets/img/post2.jpg">
         </div>
         <div class="grid-item picture"
-        data-featherlight="assets/img/video.mov"
+        href="http://www.youtube.com/embed/EIS5gg1dhQU?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
         >
-          <img src="./assets/img/roy-square.webp">
+          <img src="./assets/img/post3.jpg">
         </div>
         <div class="grid-item post">
-          <img src="./assets/img/bg-singkat.png">
+          <a href="https://indonesiaexpat.id/business-property/business-profile/roy-geurts-jesse-boon-from-beyond-growth" target="_blank">
+            <img src="./assets/img/post4.jpg">
+          </a>
         </div>
         <div class="grid-item post">
-          <img src="./assets/img/step2.jpg">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:6653133977202851841/" target="_blank">
+            <img src="./assets/img/post5.jpg">
+          </a>
         </div>
         <div class="grid-item post">
-          <img src="./assets/img/people-business.webp">
+          <a href="https://www.linkedin.com/pulse/how-create-strong-connections-anybody-8-practical-principles-boon/" target="_blank"></a>
+            <img src="./assets/img/post6.JPG" />
+          </a>
         </div>
-        <div class="grid-item video">
-          <img src="./assets/img/step3.jpg">
+        <div class="grid-item picture"
+          data-featherlight="assets/img/post7.JPG"
+        >
+          <img src="./assets/img/post7.JPG">
         </div>
-        <div class="grid-item video">
-          <img src="./assets/img/team.jpg">
+        <div class="grid-item picture"
+          data-featherlight="assets/img/post8.JPG"
+        >
+          <img src="./assets/img/post8.JPG">
         </div>
         <div class="grid-item video"
-        href="http://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
+          href="http://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
         >
-          <img src="./assets/img/salute-business.webp">
+          <img src="./assets/img/post9.JPG">
+        </div>
+        <div class="grid-item video"
+          href="http://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
+        >
+          <img src="./assets/img/post10.JPG">
         </div>
       </div>
       <button id="load-masonry">LOAD MORE</button>
@@ -1103,9 +1135,9 @@
                 <img src="assets/img/team.jpg">
               </div>
               <div class="_flex-col">
-                <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo accusantium cupiditate ex quisquam cum totam beatae quia itaque sed alias exercitationem sunt debitis dolorum praesentium minima, soluta repellendus minus mollitia?"</p>
-                <h2>- John Doe</h2>
-                <h3>Beyond Growth</h3>
+                <p>"The Emotional Intelligence training improved my team's leadership skills and the initiative to take more responsibility."</p>
+                <h2>- Doddy Suhartono​</h2>
+                <h3>F&B Director - Cinema XXI</h3>
               </div>
             </div>
           </div>
@@ -1115,9 +1147,21 @@
                 <img src="assets/img/team.jpg">
               </div>
               <div class="_flex-col">
-                <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo accusantium cupiditate ex quisquam cum totam beatae quia itaque sed alias exercitationem sunt debitis dolorum praesentium minima, soluta repellendus minus mollitia?"</p>
-                <h2>- John Doe</h2>
-                <h3>Beyond Growth</h3>
+                <p>"The BG training courses have changed the mentality of my salesforce. Anyone can benefit from their unique training principles."</p>
+                <h2>- James Mac Arthur</h2>
+                <h3>Sales Director - Sony Corporation, Int.</h3>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="_flex wrapper-testimonial">
+              <div class="img-rounded">
+                <img src="assets/img/team.jpg">
+              </div>
+              <div class="_flex-col">
+                <p>"BG provided us with the tools and skills to communicate in an Emotional Intelligence way. This has helped us to grow our business and outperform set KPI's.”"</p>
+                <h2>- Tito Tambayong</h2>
+                <h3>CEO - Vospay Finance</h3>
               </div>
             </div>
           </div>
@@ -1194,7 +1238,7 @@
     </div>
   </section>
 
-  <section class="section-contact">
+  <section class="section-contact" id="contact">
     <div class="container">
       <div class="wrapper-contact">
         <div class="wrapper-field">

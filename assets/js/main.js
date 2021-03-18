@@ -30,7 +30,18 @@ $(document).ready(function(){
   backgroundAnimation()
   postModal()
   countJs()
+  navclickEffect()
 })
+
+function navclickEffect() {
+  $(document).on('click', 'nav a', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 88
+    }, 500);
+  });
+}
 
 function countJs(){
   $(function() {
