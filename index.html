@@ -14,6 +14,19 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
+  <div id="welcome-screen" class="welcome-screen-state-logo-intro">
+    <style> #welcome-screen { position: fixed; overflow: hidden; left: 0; top: 0; width: 100%; height: 100%; z-index: 99999; background: #fff; } #welcome-screen-background { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #FFFFFF; } #welcome-screen-foreground { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; } #welcome-screen-logo { position: relative; overflow: hidden; width: 120px; height: 120px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; } #welcome-screen-logo-image { max-width: 100%; max-height: 100%; } #welcome-screen-logo-cover { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #FFFFFF; opacity: 0; } #welcome-screen.welcome-screen-state-bg-intro > #welcome-screen-foreground { display: none; } #welcome-screen.welcome-screen-state-outro { background: none; } .welcome-screen-state-logo-intro #welcome-screen-logo { animation: welcome-screen-logo-intro-logo 900ms both cubic-bezier(0.165, 0.84, 0.44, 1); } @keyframes welcome-screen-logo-intro-logo { 0% { opacity: 0; transform: scale(0.7); } 100% { opacity: 1; transform: scale(1); } } .welcome-screen-state-outro #welcome-screen-logo { animation: welcome-screen-outro-logo 300ms 0ms both ease; } @keyframes welcome-screen-outro-logo { 0% { opacity: 1 } 100% { opacity: 0 } } .welcome-screen-state-bg-intro #welcome-screen-background { animation: welcome-screen-bg-intro-background 900ms both cubic-bezier(0.645, 0.045, 0.355, 1); } @keyframes welcome-screen-bg-intro-background { 0% { transform: scaleY(0); } 100% { transform: scaleY(1); } } .welcome-screen-state-outro #welcome-screen-background { animation: welcome-screen-outro-background 900ms reverse both cubic-bezier(0.645, 0.045, 0.355, 1); } @keyframes welcome-screen-outro-background { 0% { transform: scaleY(0); } 100% { transform: scaleY(1); } } .welcome-screen-state-loop #welcome-screen-logo-cover { animation: welcome-screen-loop-logo-cover 2200ms infinite ease-in-out; opacity: 0.85; } @keyframes welcome-screen-loop-logo-cover { 0% { transform: translateX(-120px) } 50% { transform: translateX( 120px) } 100% { transform: translateX( 120px) } } </style>
+    <div id="welcome-screen-background"></div>
+    <div id="welcome-screen-foreground">
+        <div id="welcome-screen-logo">
+            <img id="welcome-screen-logo-image" src="assets/img/welcome.png" alt="">
+            <div id="welcome-screen-logo-cover"></div>
+        </div>
+    </div>
+    <script> (function r() { var t = !1; window.requestCloseWelcomeScreen = function () { t = !0 }; var e = document.getElementById("welcome-screen"), n = document.getElementById("welcome-screen-background"), r = document.getElementById("welcome-screen-logo"); function o(t) { return new Promise((function (e) { return setTimeout(e, t) })) } function i(t) { return new Promise((function (e) { return t.addEventListener("animationend", e, { once: !0 }) })) } function a(t) { e.className = "welcome-screen-state-" + t } function s() { a("static") } function c() { return a("logo-intro"), i(r) } function u() { return (a("bg-intro"), i(n)).then(c) } function l() { return a("outro"), i(n) } function p() { return a("loop"), e = r, n = function () { return t }, new Promise((function (t) { e.addEventListener("animationiteration", (function r() { n() && (e.removeEventListener("animationiteration", r), t()) })) })); var e, n } return e.addEventListener("touchstart", (function (t) { return t.preventDefault() })), { play: function () { return u().then((function () { return o(1500) })).then((function () { return t ? null : null })).then((function () { return l() })).then((function () { return e.remove() })) }, playStatic: s, playLogoIntro: c, playIntro: u, playIntroAndOutro: function () { return u().then((function () { return o(500) })).then((function () { return l() })).then((function () { return o(1e3) })).then((function () { return s() })) } } })().play(); </script>
+  </div>
+
   <nav>
     <div class="container wrapper-nav">
       <div class="header-logo">
@@ -78,9 +91,11 @@
 
   <div class="bg-home" id="home">
     <div class="wrapper-home">
-      <img src="assets/img/waldo.png" class="slide-show">
-      <img src="assets/img/roy-flip.webp" class="slide-show _d-none">
-      <img src="assets/img/jesse.jpg" class="slide-show _d-none">
+      <div class="wrapper-image-slide-show">
+        <img src="assets/img/waldo.png" class="slide-show">
+        <img src="assets/img/roy-flip.webp" class="slide-show _d-none">
+        <img src="assets/img/jesse.jpg" class="slide-show _d-none">
+      </div>
       <div class="container">
         <h3 
           data-aos="fade-up-left"
@@ -154,6 +169,9 @@
             <div class="wrapper-client">
               <img src="assets/img/vospay.png">
               <img src="assets/img/xiaomi.png">
+              <img src="assets/img/heineken-logo.svg">
+              <img src="assets/img/wd.png">
+              <img src="assets/img/Emtek_logo.png">
             </div>
           </div>
         </div>
@@ -439,7 +457,7 @@
           data-aos-delay="300"
           data-aos-anchor-placement="center-bottom"
           class="caption-video">
-          The coronavirus pandemic has disrupted corporate life forever. Emotional intelligence is the new gold standard and our daily leadership is being challenged. Empower tomorrow’s leaders.<br/>If not now… when?
+            The coronavirus has disrupted corporate life forever. Emotional intelligence is the new gold standard.
           </div>
         </div>
       </div>
@@ -1014,7 +1032,7 @@
       <div class="wrapper-values flex _space-between">
         <div class="hover-1">
           <div class="inner-hover-1 values-item">
-            <img src="assets/img/lnr-star.svg">
+            <img src="assets/img/star-half.svg">
             <h2>
               Excellence
             </h2>
@@ -1069,9 +1087,9 @@
       <div class="feed-masonry">
         <div class="gutter-sizer"></div>
         <div class="grid-item picture"
-        data-featherlight="assets/img/post1.JPG"
+        data-featherlight="assets/img/post15.jpg"
         >
-          <img src="./assets/img/post1.JPG">
+          <img src="./assets/img/post15.jpg">
         </div>
         <div class="grid-item picture"
         data-featherlight="assets/img/post2.jpg"
@@ -1095,7 +1113,7 @@
         </div>
         <div class="grid-item post">
           <a href="https://www.linkedin.com/pulse/how-create-strong-connections-anybody-8-practical-principles-boon/" target="_blank"></a>
-            <img src="./assets/img/post6.JPG" />
+            <img src="./assets/img/post14.JPG" />
           </a>
         </div>
         <div class="grid-item picture"
@@ -1111,7 +1129,7 @@
         <div class="grid-item video"
           href="http://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
         >
-          <img src="./assets/img/post9.JPG">
+          <img src="./assets/img/post13.JPG">
         </div>
         <div class="grid-item video"
           href="http://www.youtube.com/embed/cbLPZzM4fI8?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"
@@ -1131,36 +1149,27 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="_flex wrapper-testimonial">
-              <div class="img-rounded">
-                <img src="assets/img/team.jpg">
-              </div>
               <div class="_flex-col">
                 <p>"The Emotional Intelligence training improved my team's leadership skills and the initiative to take more responsibility."</p>
-                <h2>- Doddy Suhartono​</h2>
+                <h2>Doddy Suhartono​</h2>
                 <h3>F&B Director - Cinema XXI</h3>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="_flex wrapper-testimonial">
-              <div class="img-rounded">
-                <img src="assets/img/team.jpg">
-              </div>
               <div class="_flex-col">
                 <p>"The BG training courses have changed the mentality of my salesforce. Anyone can benefit from their unique training principles."</p>
-                <h2>- James Mac Arthur</h2>
+                <h2>James Mac Arthur</h2>
                 <h3>Sales Director - Sony Corporation, Int.</h3>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="_flex wrapper-testimonial">
-              <div class="img-rounded">
-                <img src="assets/img/team.jpg">
-              </div>
               <div class="_flex-col">
                 <p>"BG provided us with the tools and skills to communicate in an Emotional Intelligence way. This has helped us to grow our business and outperform set KPI's.”"</p>
-                <h2>- Tito Tambayong</h2>
+                <h2>Tito Tambayong</h2>
                 <h3>CEO - Vospay Finance</h3>
               </div>
             </div>
@@ -1329,7 +1338,7 @@
   <script>
     let itemsGrid = [
       {
-        img: './assets/img/salute-business.webp',
+        img: './assets/img/post3.jpg',
         theClass: 'picture'
       },
       {
@@ -1384,7 +1393,6 @@
   <script src="assets/js/masonry.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAegoqArWnsC7aYnTQ9gGsTaJ6UQoAxFsE&callback=initMap&libraries=&v=weekly" async ></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https:////cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="assets/js/count.min.js"></script>

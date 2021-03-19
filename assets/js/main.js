@@ -40,6 +40,7 @@ function navclickEffect() {
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top - 88
     }, 500);
+    $("#toggle").click()
   });
 }
 
@@ -114,13 +115,24 @@ function initMasonry() {
     $container.isotope({ filter: `${val}` })
   })
 
+  function getElement(el) {
+    switch (el.theClass){
+      case 'picture': 
+        return `<div data-featherlight="${el.img}" class="grid-item ${el.theClass}"><img src="${el.img}"/></div>`
+      case 'post':
+        return `<div class="grid-item ${el.theClass}"> <a href="${el.link}" target="_blank"> <img src="${el.img}"> </a> </div>`
+      case 'video':
+        return ` <div class="grid-item ${el.theClass}" href="http://www.youtube.com/embed/${el.video}?rel=0&amp;autoplay=1" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" > <img src="${el.img}"> </div> `
+    }
+  }
+
   function getItem() {
     let el = ''
     const max = 10
     let i = 0;
     for(let i = 0; i < max ; i++) {
       try {
-        el = el + `<div class="grid-item ${itemsGrid[i].theClass}"><img src="${itemsGrid[i].img}"/></div>`
+        el = el + getElement(itemsGrid[i])
       } catch(er){
         itemsGrid.splice(0, i)
         break;
@@ -145,7 +157,6 @@ function hamburger() {
       $(this).removeClass('force')
       $(".navbar-mobile").fadeOut()
       $(".navbar-mobile a").fadeOut()
-      $(".navbar-mobile button").fadeOut()
     }
     else {
       $(this).addClass('active')
@@ -162,9 +173,6 @@ function hamburger() {
         }, 150*i);
         // each element should animate half a second after the last one.
       });
-      setTimeout(function(){
-        $(".navbar-mobile button").fadeIn()
-      }, 800)
     }
   });
 }
