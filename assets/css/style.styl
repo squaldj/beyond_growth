@@ -24,6 +24,7 @@ html, body
 
 kbd
   font-family 'Montserrat', sans-serif !important
+  font-size 40px !important
   // line-height 26px
 // modifier
 ._text-left
@@ -211,6 +212,13 @@ nav
   margin-left: auto;
   margin-right: auto;
 
+.wrapper-image-slide-show
+  position absolute
+  height 100%
+  width 100%
+  top 0
+  left 0
+
 .wrapper-home 
   height: 100%;
   display: flex;
@@ -376,7 +384,7 @@ section
 
 .wrapper-experience
   display flex
-  width 50%
+  width 45%
   flex-direction column
   align-items center
   justify-content center
@@ -395,7 +403,7 @@ section
 
 .experience-video
   width 50%
-  margin-top -80px
+  margin-top -100px
   video
     width 100%
     height auto;
@@ -482,7 +490,7 @@ section
   color white
   border-radius 5px
   background $darkBlue
-  width 70%
+  width 86%
   margin-left auto
   margin-right auto
   padding 20px 30px
@@ -1002,6 +1010,8 @@ section
 
 .navbar-mobile
   display none
+  a
+    transition unset !important
 
 .section-business
   position relative
@@ -1163,7 +1173,7 @@ section
   margin-top 50px
   display grid
   grid-template-columns 1fr 1fr
-  grid-gap 50px
+  grid-gap 30px
   padding-left: 200px;
   padding-right: 30px;
 
@@ -1333,18 +1343,21 @@ section
     font-color $gery
     font-size 16px
     margin-bottom 15px
+    text-align center
   > ._flex-col
     width 70%
     h2
       margin 0
       font-size 18px
       font-weight bold
+      text-align center
     h3
       font-size 16px
       font-weight 400
       font-family $openSans
       color $grey
       margin 0
+      text-align center
   .img-rounded
     display inline-block
     width: 15%;
@@ -1556,7 +1569,6 @@ section
       width 200px
       transition unset !important
       margin-left auto
-      display none
   .wrapper-contact
     padding 0
   .wrapper-location
@@ -1738,15 +1750,62 @@ section
       display inline-block
       margin 0 !important
     .swiper-button-prev
-      margin-left 0px !important
-      margin-top 50px !important
+      margin-left 45% !important
+      margin-top 0px !important
 
 @media (max-width: 450px)
+  .section-testimonial
+    padding-bottom 30px
+    .swiper-button-prev
+      margin-left 40% !important
+  .wrapper-experience
+    align-items center
+    width 50%
+    span
+      text-align center
+
+  .bg-home
+    height 300px
+    margin-top 76px
+  .wrapper-home
+    flex-direction column
+    >.container
+      position absolute 
+      top 50%
+      transform translateY(-50%)
+      h1
+        font-size 22px
+        padding-left 30%
+      h3
+        font-size 12px
+      h2
+        font-size 16px
+  .badge-black
+    right: -140px;
+    width: 100%;
+    height: 120%;
+
+  .section-client
+    pading-top 30px
+    padding-bottom 30px
+  
+  .wrapper-client
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-gap 20px
+    width 88%
+    img
+      width 100%
+      height auto
+
+  .wrapper-image-slide-show
+    position relative;
+
   .wrapper-footer
     flex-direction column
     img
-      order: 1;
-      margin-top 20px
+      order: -1;
+      margin-bottom 20px
     
   .header-logo
     img
